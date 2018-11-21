@@ -8,23 +8,45 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import theme from "./theme";
-import { withStyles, AppBar, Toolbar } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 import gitIcon from "./assets/img/git.png";
+import gitInsta from "./assets/img/insta.png";
+import AppBarCusto from "./AppBarCusto";
 
 const Home = props => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.topBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-            Programmation Web - F3 - 2018
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <AppBarCusto title="F3 - 2018" />
+
       <div className={classes.content}>
         <div className={classes.title}>
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="h4" gutterBottom>
+            Fil rouge
+          </Typography>
+        </div>
+        <Link to="eval/git" className={classes.noDecoration}>
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={gitInsta}
+                title="instaZz"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  InstaZz
+                </Typography>
+                <Typography component="p">
+                  Réalisation d'un instagram like
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
+
+        <div className={classes.title}>
+          <Typography variant="h4" gutterBottom>
             Outils & concepts
           </Typography>
         </div>
@@ -88,7 +110,7 @@ const Home = props => {
           </CardActions>
         </Card>
         <div className={classes.title}>
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             Le front
           </Typography>
         </div>
@@ -135,7 +157,7 @@ const Home = props => {
           </CardActions>
         </Card>
         <div className={classes.title}>
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             Le back
           </Typography>
         </div>

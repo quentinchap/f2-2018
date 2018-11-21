@@ -24,6 +24,9 @@ const styles = (colors, fonts) => ({
       display: "flex",
       flexWrap: "wrap"
     },
+    noDecoration: {
+      textDecoration: "none!important"
+    },
     card: {
       minWidth: 300,
       maxWidth: 300,
@@ -36,6 +39,9 @@ const styles = (colors, fonts) => ({
     },
     root: {
       flexGrow: 1
+    },
+    icon: {
+      color: "white"
     }
   }
 });
