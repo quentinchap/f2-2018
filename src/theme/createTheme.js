@@ -29,13 +29,12 @@ const styles = (colors, fonts) => ({
     },
     card: {
       minWidth: 300,
-      maxWidth: 300,
-      width: 300,
+      maxWidth: '30vw',
       flex: 1,
       margin: 20
     },
     media: {
-      height: 140
+      height: 200
     },
     root: {
       flexGrow: 1

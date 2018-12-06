@@ -16,7 +16,7 @@ const GitEval = props => {
             <ul>
               <li>Créer un repo pour votre application front</li>
               <li>Créer un repo pour votre application back</li>
-              <li>Utiliser ces repos tout au long du projet fil rouge</li>
+              <li>Utiliser ces repos tout au long du projet</li>
               <li>Bonus: Suivre le gitflow que nous avons étudié</li>
             </ul>
           </Typography>

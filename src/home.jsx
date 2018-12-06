@@ -10,10 +10,136 @@ import { Link } from "react-router-dom";
 import theme from "./theme";
 import { withStyles } from "@material-ui/core";
 import gitIcon from "./assets/img/git.png";
+import htmlIcon from "./assets/img/html.png";
+import webIcon from "./assets/img/web.jpg";
+import uxIcon from "./assets/img/ux.jpg";
+import ciIcon from "./assets/img/ci.jpg";
 import gitInsta from "./assets/img/insta.png";
 import AppBarCusto from "./AppBarCusto";
 
+const BasicCard = ({
+  active,
+  classes,
+  title,
+  description,
+  icon,
+  course,
+  evaluation
+}) =>
+  active ? (
+    <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia className={classes.media} image={icon} title="Git" />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {title}
+          </Typography>
+          <Typography component="p">{description}</Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        {course ? (
+          <Button size="small" color="primary">
+            <Link to={course}>Voir le cours</Link>
+          </Button>
+        ) : (
+          ""
+        )}
+        {evaluation ? (
+          <Button size="small" color="primary">
+            <Link to={evaluation}>Les attentes</Link>
+          </Button>
+        ) : (
+          ""
+        )}
+      </CardActions>
+    </Card>
+  ) : (
+    ""
+  );
+
+
 const Home = props => {
+  const coursesTools = [
+    {
+      active: true,
+      title: "Les bases du web",
+      description: "Les concept de bases à maitriser",
+      icon: webIcon,
+      course: "/base",
+      evaluation: ""
+    },
+    {
+      active: true,
+      title: "Git",
+      description: "Initiation à git",
+      icon: gitIcon,
+      course: "/git",
+      evaluation: "/eval/git"
+    },
+    {
+      active: true,
+      title: "Integration continue",
+      description: "Automatiser et systèmatiser les tâches pénibless",
+      icon: ciIcon,
+      course: "/git",
+      evaluation: "/eval/git"
+    },
+    {
+      active: true,
+      title: "UX / UI",
+      description:
+        "Ce n'est pas l'idée qui compte mais comment vous la présentez.",
+      icon: uxIcon,
+      course: "/git",
+      evaluation: "/eval/git"
+    }
+  ];
+  const coursesFront = [
+    {
+      active: true,
+      title: "ReactJs",
+      description: "",
+      icon: webIcon,
+      course: "",
+      evaluation: ""
+    },
+    {
+      active: true,
+      title: "Html / CSS",
+      description: "Comment décrire une page web static simplement",
+      icon: htmlIcon,
+      course: "/html",
+      evaluation: "/eval/html-eval"
+    }
+  ];
+  const coursesBack = [
+    {
+      active: true,
+      title: " Ma première API",
+      description: "",
+      icon: webIcon,
+      course: "",
+      evaluation: ""
+    },
+    {
+      active: true,
+      title: "Technique d'authentification",
+      description: "Comment décrire une page web static simplement",
+      icon: htmlIcon,
+      course: "/html",
+      evaluation: "/eval/html-eval"
+    },
+    {
+      active: true,
+      title: "Utilisation d'une BDD",
+      description: "Comment décrire une page web static simplement",
+      icon: htmlIcon,
+      course: "/html",
+      evaluation: "/eval/html-eval"
+    }
+  ];
+
   const { classes } = props;
   return (
     <div className={classes.root}>
@@ -25,7 +151,7 @@ const Home = props => {
             Fil rouge
           </Typography>
         </div>
-        <Link to="eval/git" className={classes.noDecoration}>
+        <Link to="eval/tp" className={classes.noDecoration}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
@@ -44,187 +170,56 @@ const Home = props => {
             </CardActionArea>
           </Card>
         </Link>
-
         <div className={classes.title}>
           <Typography variant="h4" gutterBottom>
             Outils & concepts
           </Typography>
         </div>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Git
-              </Typography>
-              <Typography component="p">Initiation à git</Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              <Link to="eval/git">Les attentes</Link>
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                UX / UI
-              </Typography>
-              <Typography component="p">Intégration continue</Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              Les attentes
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                UX / UI
-              </Typography>
-              <Typography component="p">
-                Découvrez ce qu'est l'UX et l'UI
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              Les attentes
-            </Button>
-          </CardActions>
-        </Card>
+        {coursesTools.map(c => (
+          <BasicCard
+            active={c.active}
+            classes={classes}
+            title={c.title}
+            description={c.description}
+            icon={c.icon}
+            course={c.course}
+            evaluation={c.evaluation}
+          />
+        ))}
         <div className={classes.title}>
           <Typography variant="h4" gutterBottom>
             Le front
           </Typography>
         </div>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Html / CSS
-              </Typography>
-              <Typography component="p">
-                Découvrez ce qu'est l'UX et l'UI
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              Les attentes
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                ReactJs
-              </Typography>
-              <Typography component="p">
-                Découvrez ce qu'est l'UX et l'UI
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              Les attentes
-            </Button>
-          </CardActions>
-        </Card>
+        {coursesFront.map(c => (
+          <BasicCard
+            active={c.active}
+            classes={classes}
+            title={c.title}
+            description={c.description}
+            icon={c.icon}
+            course={c.course}
+            evaluation={c.evaluation}
+          />
+        ))}
+
         <div className={classes.title}>
           <Typography variant="h4" gutterBottom>
             Le back
           </Typography>
         </div>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Ma première API
-              </Typography>
-              <Typography component="p">
-                Découvrez ce qu'est l'UX et l'UI
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              Les attentes
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Technique d'authentification
-              </Typography>
-              <Typography component="p">
-                Découvrez ce qu'est l'UX et l'UI
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              Les attentes
-            </Button>
-          </CardActions>
-        </Card>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={gitIcon} title="Git" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Utilisation d'une BDD
-              </Typography>
-              <Typography component="p">
-                Découvrez ce qu'est l'UX et l'UI
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to="/git">Voir le cours</Link>
-            </Button>
-            <Button size="small" color="primary" to="/git-eval">
-              Les attentes
-            </Button>
-          </CardActions>
-        </Card>
-      </div>
+        {coursesBack.map(c => (
+          <BasicCard
+            active={c.active}
+            classes={classes}
+            title={c.title}
+            description={c.description}
+            icon={c.icon}
+            course={c.course}
+            evaluation={c.evaluation}
+          />
+        ))}
+        </div>
     </div>
   );
 };
