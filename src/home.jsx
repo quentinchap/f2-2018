@@ -78,7 +78,7 @@ const Home = props => {
       evaluation: "/eval/git"
     },
     {
-      active: true,
+      active: false,
       title: "Integration continue",
       description: "Automatiser et systèmatiser les tâches pénibless",
       icon: ciIcon,
@@ -86,7 +86,7 @@ const Home = props => {
       evaluation: "/eval/git"
     },
     {
-      active: true,
+      active: false,
       title: "UX / UI",
       description:
         "Ce n'est pas l'idée qui compte mais comment vous la présentez.",
@@ -97,7 +97,7 @@ const Home = props => {
   ];
   const coursesFront = [
     {
-      active: true,
+      active: false,
       title: "ReactJs",
       description: "",
       icon: webIcon,
@@ -115,7 +115,7 @@ const Home = props => {
   ];
   const coursesBack = [
     {
-      active: true,
+      active: false,
       title: " Ma première API",
       description: "",
       icon: webIcon,
@@ -123,7 +123,7 @@ const Home = props => {
       evaluation: ""
     },
     {
-      active: true,
+      active: false,
       title: "Technique d'authentification",
       description: "Comment décrire une page web static simplement",
       icon: htmlIcon,
@@ -131,7 +131,7 @@ const Home = props => {
       evaluation: "/eval/html-eval"
     },
     {
-      active: true,
+      active: false,
       title: "Utilisation d'une BDD",
       description: "Comment décrire une page web static simplement",
       icon: htmlIcon,

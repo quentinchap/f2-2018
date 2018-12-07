@@ -14,6 +14,7 @@ const GitEval = props => {
           <Typography variant="body1" gutterBottom>
             <p>Pour valider ce module vous devez</p>
             <ul>
+              <li>Faire les exercices <a href="https://katacoda.com/courses/git">https://katacoda.com/courses/git</a></li>
               <li>Créer un repo pour votre application front</li>
               <li>Créer un repo pour votre application back</li>
               <li>Utiliser ces repos tout au long du projet</li>
