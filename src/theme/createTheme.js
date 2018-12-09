@@ -11,6 +11,10 @@ const styles = (colors, fonts) => ({
     body: {
       background: "red"
     },
+    whiteBack: {
+      background: "white",
+      padding: 5
+    },
     title: {
       width: "100vw"
     },
@@ -29,7 +33,7 @@ const styles = (colors, fonts) => ({
     },
     card: {
       minWidth: 300,
-      maxWidth: '30vw',
+      maxWidth: "30vw",
       flex: 1,
       margin: 20
     },
@@ -41,6 +45,9 @@ const styles = (colors, fonts) => ({
     },
     icon: {
       color: "white"
+    },
+    leftAlign: {
+      textAlign: "left"
     }
   }
 });

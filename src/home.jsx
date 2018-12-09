@@ -110,7 +110,7 @@ const Home = props => {
       description: "Comment décrire une page web static simplement",
       icon: htmlIcon,
       course: "/html",
-      evaluation: "/eval/html-eval"
+      evaluation: "/eval/html"
     }
   ];
   const coursesBack = [
@@ -143,7 +143,7 @@ const Home = props => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBarCusto title="F3 - 2018" />
+      <AppBarCusto title="F2 - 2018" />
 
       <div className={classes.content}>
         <div className={classes.title}>
