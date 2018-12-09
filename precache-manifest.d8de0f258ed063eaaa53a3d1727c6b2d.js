@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/insta.756e4542.png"
   },
   {
-    "revision": "6aec839e4d03b5787f30",
+    "revision": "122bf2abbe7093ced040",
     "url": "/f2-2018/static/css/main.a739c1d9.chunk.css"
   },
   {
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/ci.f7d68310.jpg"
   },
   {
-    "revision": "6aec839e4d03b5787f30",
-    "url": "/f2-2018/static/js/main.6aec839e.chunk.js"
+    "revision": "122bf2abbe7093ced040",
+    "url": "/f2-2018/static/js/main.122bf2ab.chunk.js"
   },
   {
     "revision": "f6a5fd17d306b1629f726813391f413f",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/webSchema1.cbd1e783.png"
   },
   {
-    "revision": "84f5e2b56042d1bba70f2d109e7ce744",
+    "revision": "d807175011637125e5d38a32025a92ea",
     "url": "/f2-2018/index.html"
   }
 ];
