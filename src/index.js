@@ -11,9 +11,10 @@ import HtmlEval from "./eval/html";
 import BasePrez from './slides/base';
 
 ReactDOM.render(
-  <Router>
+  <Router basename='/f2-2018/'>
     <div>
       <Route path="/" exact component={Home} />
+      <Route path="/f2-2018/" exact component={Home} />
       <Route path="/git/" component={GitPrez} />
       <Route path="/html/" component={HtmlPrez} />
       <Route path="/base/" component={BasePrez} />
