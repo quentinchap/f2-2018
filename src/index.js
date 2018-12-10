@@ -9,6 +9,7 @@ import GitEval from "./eval/git";
 import TPEval from "./eval/tp";
 import HtmlEval from "./eval/html";
 import BasePrez from './slides/base';
+import React1Prez from './slides/react1';
 
 ReactDOM.render(
   <Router basename='/f2-2018/'>
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Route path="/" exact component={Home} />
       <Route path="/f2-2018/" exact component={Home} />
       <Route path="/git/" component={GitPrez} />
+      <Route path="/react1/" component={React1Prez} />
       <Route path="/html/" component={HtmlPrez} />
       <Route path="/base/" component={BasePrez} />
       <Route path="/eval/html/" component={HtmlEval} />
