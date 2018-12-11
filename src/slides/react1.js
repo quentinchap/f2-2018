@@ -15,6 +15,7 @@ import {
 } from "spectacle";
 import theme from "../theme";
 import react1 from "../assets/img/react1.png";
+import react1Archi from "../assets/img/react1-archi.png";
 import gitBranch from "../assets/img/git-branch.png";
 import gitFlow from "../assets/img/gitflow.png";
 
@@ -98,14 +99,9 @@ export default class React1Prez extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
-            Bonus: clients graphiques
+            Architecture
           </Heading>
-          <List>
-            <ListItem>Gitkarken</ListItem>
-            <ListItem>Tortoise git</ListItem>
-            <ListItem>Plugin IDE</ListItem>
-            <ListItem>...</ListItem>
-          </List>
+          <img src={react1Archi} />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="tertiary" caps>
