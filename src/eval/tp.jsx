@@ -20,8 +20,8 @@ const TPEval = props => {
             <h3>Couverture du besoin</h3>
             <ul>
               <li>
-                Le projet est fonctionnel. Privilégiez la qualité au
-                fonctionnalitées - 80%
+                Le projet est fonctionnel. Privilégiez la qualité aux
+                fonctionnalités - 80%
               </li>
               <li>Les méthodes et stratégies d'élicitation du besoin - 20%</li>
             </ul>
@@ -29,12 +29,12 @@ const TPEval = props => {
             <ul>
               <li>Votre code est hébergé sur github - 20%</li>
               <li>
-                Une bonne stratégie de gestion de vos repo est mis en place -
+                Une bonne stratégie de gestion de vos repo est mise en place -
                 30%
               </li>
               <li>Le code est maintenable et compréhensible - 30%</li>
               <li>
-                Vous savez choisir les bon outils pour travailler efficacement -
+                Vous savez choisir les bons outils pour travailler efficacement -
                 20%
               </li>
             </ul>
@@ -43,10 +43,10 @@ const TPEval = props => {
               <li>Les tâches répétitives sont automatisées - 20%</li>
               <li>Vous êtes prédictif dans votre avancement - 20%</li>
               <li>
-                Vous maitrisez au delà des attentes le developpement front - 20%
+                Vous maitrisez au delà des attentes le développement front - 20%
               </li>
               <li>
-                Vous maitrisez au delà des attentes le developpement back - 20%
+                Vous maitrisez au delà des attentes le développement back - 20%
               </li>
               <li>Présence physique et mentale aux TP/TD - 20%</li>
             </ul>

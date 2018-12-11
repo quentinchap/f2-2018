@@ -51,7 +51,7 @@ export default class GitPrez extends React.Component {
           </Heading>
           <List>
             <ListItem>Collaboration</ListItem>
-            <ListItem>Retour en arriére</ListItem>
+            <ListItem>Retour en arrière</ListItem>
             <ListItem>Automatisation</ListItem>
             <ListItem>Audit</ListItem>
             <ListItem>Travailler d'où vous voulez</ListItem>
