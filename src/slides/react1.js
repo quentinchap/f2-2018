@@ -24,6 +24,10 @@ import react1Var from "../assets/img/react1Var.png";
 import react1lifCycle from "../assets/img/react1lifCycle.png";
 import react1Export from "../assets/img/react1Export.png";
 import react1FirstComponent from "../assets/img/react1FirstComponent.png";
+import react1State from "../assets/img/react1State.png";
+import react1Prop from "../assets/img/react1Prop.png";
+import react1DefThis from "../assets/img/react1DefThis.png";
+import react1Router from "../assets/img/react1Router.png";
 
 export default class React1Prez extends React.Component {
   render() {
@@ -188,7 +192,7 @@ export default class React1Prez extends React.Component {
           </Heading>
           <img src={react1Class} />
         </Slide>
-        
+
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Js moderne (ES2018) - Arrow function
@@ -221,6 +225,33 @@ export default class React1Prez extends React.Component {
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
+            React - Premier composant
+          </Heading>
+          <img src={react1FirstComponent} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            React - State
+          </Heading>
+          <p>Chaque composant posséde un état (state) qui lui est propre</p>
+          <br />
+          <img src={react1State} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            React - Reactions aux événements
+          </Heading>
+          <a href="https://codepen.io/quentChap/full/ebNQwa">Exemple</a>
+          <br />
+          <a href="https://frontarm.com/toolbox/react-events-cheatsheet/">
+            Liste d'événements
+          </a>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
             React - Life cycle
           </Heading>
           <img src={react1lifCycle} />
@@ -232,33 +263,38 @@ export default class React1Prez extends React.Component {
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
-            React - Premier composant
+            React - Props
           </Heading>
-          <img src={react1FirstComponent} />
-        </Slide>
-
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            React - State
-          </Heading>
-        </Slide>
-
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            React - Reactions aux événements
-          </Heading>
+          <List>
+            <ListItem>Passer des paramêtres</ListItem>
+            <ListItem>Remonter de mises à jours d'état</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React - Props
           </Heading>
+          <img src={react1Prop} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            React - Definition du this
+          </Heading>
+          <p>
+            Sans prendre de précaution en passant des fonctions en paramètre le
+            "this" en vigueur à l'appel disparaît.
+          </p>
+          <img src={react1DefThis} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React - React router
           </Heading>
+          <p>npm install react-router-dom</p>
+          <img src={react1Router} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -270,6 +306,33 @@ export default class React1Prez extends React.Component {
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             A vous de jouer
+          </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Asynchrone
+          </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Fetch
+          </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Asynchrone
+          </Heading>
+          <a href=" https://en.wikipedia.org/api/rest_v1/#!/Page_content/get_page">
+            Jouez avec l'API de Wikipédia
+          </a>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Prop Drilling - Context
           </Heading>
         </Slide>
 
@@ -287,13 +350,19 @@ export default class React1Prez extends React.Component {
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
-            Prop Drilling - Context
+            Prop Drilling - Redux
           </Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
-            Prop Drilling - Redux
+            Eslint
+          </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Tests
           </Heading>
         </Slide>
       </Deck>
