@@ -16,6 +16,7 @@ import {
 import theme from "../theme";
 import react1 from "../assets/img/react1.png";
 import react1Archi from "../assets/img/react1-archi.png";
+import react1Archi2 from "../assets/img/react1Archi.png";
 import react1Package from "../assets/img/react1-package.png";
 import react1Class from "../assets/img/react1-class.png";
 import react1ArrowFunction from "../assets/img/react1ArrowFunction.png";
@@ -28,6 +29,15 @@ import react1State from "../assets/img/react1State.png";
 import react1Prop from "../assets/img/react1Prop.png";
 import react1DefThis from "../assets/img/react1DefThis.png";
 import react1Router from "../assets/img/react1Router.png";
+import react1Form from "../assets/img/react1Form.png";
+import react1Form2 from "../assets/img/react1Form2.png";
+import archiJs from "../assets/img/archiJs.png";
+import react1Fetch from "../assets/img/react1Fetch.png";
+import react1PropDrilling from "../assets/img/react1PropDrilling.png";
+import react1Consumer from "../assets/img/react1Consumer.png";
+import react1Provider from "../assets/img/react1Provider.png";
+import react1Jss from "../assets/img/react1Jss.png";
+import react1jest from "../assets/img/react1jest.png";
 
 export default class React1Prez extends React.Component {
   render() {
@@ -39,7 +49,7 @@ export default class React1Prez extends React.Component {
       >
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            React JS - Part. 1
+            React JS
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
             Premiers pas avec reactJS
@@ -232,6 +242,13 @@ export default class React1Prez extends React.Component {
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
+            React
+          </Heading>
+          <img src={react1Archi2} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
             React - State
           </Heading>
           <p>Chaque composant posséde un état (state) qui lui est propre</p>
@@ -301,6 +318,18 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             React - Les formulaires
           </Heading>
+          <img src={react1Form} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            React - Les formulaires
+          </Heading>
+          <img src={react1Form2} />
+          <br />
+          <p style={{ fontSize: "0.7em" }}>
+            &lt;PhoneInput name="Mobile" required={"{true}"} />
+          </p>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -313,12 +342,25 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Asynchrone
           </Heading>
+          <List>
+            <ListItem>Monothread</ListItem>
+            <ListItem>Ne pas bloquer l'interface utilisateur</ListItem>
+          </List>
+          <img src={archiJs} />
+          <br />
+          <a
+            style={{ fontSize: "0.5em" }}
+            href="https://javascript.developpez.com/actu/102019/Apprendre-les-mecanismes-de-base-de-l-asynchrone-en-JavaScript-un-tutoriel-de-Yahiko/"
+          >
+            Source
+          </a>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Fetch
           </Heading>
+          <img src={react1Fetch} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -334,36 +376,63 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Prop Drilling - Context
           </Heading>
+          <img src={react1PropDrilling} />
+          <br />
+          <a
+            style={{ fontSize: "0.5em" }}
+            href="https://www.carlrippon.com/playing-with-the-context-api-in-react-16-3/"
+          >
+            Source
+          </a>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Prop Drilling - Context
+          </Heading>
+          <img src={react1Provider} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Prop Drilling - Context
+          </Heading>
+          <img src={react1Consumer} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React - JSS
           </Heading>
+          <img src={react1Jss} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React - Material-ui
           </Heading>
-        </Slide>
-
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Prop Drilling - Redux
-          </Heading>
+          <a href="https://material-ui.com">React components that implement Google's Material Design.</a>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Eslint
           </Heading>
+          <List>
+            <ListItem>Aide à l'apprentissage</ListItem>
+            <ListItem>Prévient des bugs</ListItem>
+            <ListItem>Aide à la standardisation du code</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Tests
           </Heading>
+          <List>
+            <ListItem>npm run test</ListItem>
+            <ListItem>lib utilisée Jest</ListItem>
+            <ListItem>Doc react: <a href="https://jestjs.io/docs/en/tutorial-react">ici</a></ListItem>
+          </List>
+          <img src={react1jest}/>
         </Slide>
       </Deck>
     );

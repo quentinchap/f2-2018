@@ -58,7 +58,6 @@ const BasicCard = ({
     ""
   );
 
-
 const Home = props => {
   const coursesTools = [
     {
@@ -97,20 +96,20 @@ const Home = props => {
   ];
   const coursesFront = [
     {
-      active: false,
-      title: "ReactJs",
-      description: "",
-      icon: webIcon,
-      course: "",
-      evaluation: ""
-    },
-    {
       active: true,
       title: "Html / CSS",
       description: "Comment décrire une page web static simplement",
       icon: htmlIcon,
       course: "/html",
       evaluation: "/eval/html"
+    },
+    {
+      active: true,
+      title: "ReactJs",
+      description: "",
+      icon: webIcon,
+      course: "/react1",
+      evaluation: ""
     }
   ];
   const coursesBack = [
@@ -219,7 +218,7 @@ const Home = props => {
             evaluation={c.evaluation}
           />
         ))}
-        </div>
+      </div>
     </div>
   );
 };
