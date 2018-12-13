@@ -39,16 +39,20 @@ const BasicCard = ({
       </CardActionArea>
       <CardActions>
         {course ? (
-          <Button size="small" color="primary">
-            <Link to={course}>Voir le cours</Link>
-          </Button>
+          <Link to={course}>
+            <Button size="small" color="primary">
+              Voir le cours
+            </Button>
+          </Link>
         ) : (
           ""
         )}
         {evaluation ? (
-          <Button size="small" color="primary">
-            <Link to={evaluation}>Les attentes</Link>
-          </Button>
+          <Link to={evaluation}>
+            <Button size="small" color="primary">
+              Les attentes
+            </Button>
+          </Link>
         ) : (
           ""
         )}
