@@ -89,7 +89,7 @@ const Home = props => {
       evaluation: "/eval/git"
     },
     {
-      active: false,
+      active: true,
       title: "UX / UI",
       description:
         "Ce n'est pas l'idée qui compte mais comment vous la présentez.",
