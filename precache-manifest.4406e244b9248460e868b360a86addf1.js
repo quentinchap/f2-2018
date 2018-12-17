@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/react1.69cbb539.png"
   },
   {
-    "revision": "a610d45b005abdeec8ea",
-    "url": "/f2-2018/static/css/main.614a8020.chunk.css"
+    "revision": "851f614824f98b0fd1d6",
+    "url": "/f2-2018/static/css/main.b5134574.chunk.css"
   },
   {
-    "revision": "cceb03c8eb1d5537de06",
-    "url": "/f2-2018/static/js/1.cceb03c8.chunk.js"
+    "revision": "b755e4cc0e5f193ef2fc",
+    "url": "/f2-2018/static/js/1.b755e4cc.chunk.js"
   },
   {
     "revision": "2f5f0c3bd6e05dd253ba",
@@ -22,6 +22,18 @@ self.__precacheManifest = [
   {
     "revision": "f4b8238b8227921d4b6822c2b4d1dd27",
     "url": "/f2-2018/static/media/web.f4b8238b.jpg"
+  },
+  {
+    "revision": "f6a5fd17d306b1629f726813391f413f",
+    "url": "/f2-2018/static/media/git-process.f6a5fd17.png"
+  },
+  {
+    "revision": "ecd41aaafc97a284e6c341307073db5f",
+    "url": "/f2-2018/static/media/git-branch.ecd41aaa.png"
+  },
+  {
+    "revision": "42fd0cda50b10c84ccbb8833c3201d66",
+    "url": "/f2-2018/static/media/gitflow.42fd0cda.png"
   },
   {
     "revision": "5521f70d145b0fff2cb2976dbeed0bf1",
@@ -56,18 +68,6 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/insta.756e4542.png"
   },
   {
-    "revision": "f6a5fd17d306b1629f726813391f413f",
-    "url": "/f2-2018/static/media/git-process.f6a5fd17.png"
-  },
-  {
-    "revision": "ecd41aaafc97a284e6c341307073db5f",
-    "url": "/f2-2018/static/media/git-branch.ecd41aaa.png"
-  },
-  {
-    "revision": "42fd0cda50b10c84ccbb8833c3201d66",
-    "url": "/f2-2018/static/media/gitflow.42fd0cda.png"
-  },
-  {
     "revision": "aa05f441be38d675e3d9a62303f23802",
     "url": "/f2-2018/static/media/css1.aa05f441.png"
   },
@@ -100,8 +100,8 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/webSchema1.cbd1e783.png"
   },
   {
-    "revision": "a610d45b005abdeec8ea",
-    "url": "/f2-2018/static/js/main.a610d45b.chunk.js"
+    "revision": "851f614824f98b0fd1d6",
+    "url": "/f2-2018/static/js/main.851f6148.chunk.js"
   },
   {
     "revision": "247b2165207ca7009e63645dd9438eaf",
@@ -196,7 +196,11 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/react1jest.5e13da10.png"
   },
   {
-    "revision": "21a40c7ee0192e1915921876397ff14b",
+    "revision": "c130b8ec2ef9faa65fe612283785174c",
+    "url": "/f2-2018/static/media/bets.c130b8ec.pdf"
+  },
+  {
+    "revision": "088c0406bdf117a9c143e98bbc3865d5",
     "url": "/f2-2018/index.html"
   }
 ];
