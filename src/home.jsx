@@ -14,6 +14,7 @@ import htmlIcon from "./assets/img/html.png";
 import webIcon from "./assets/img/web.jpg";
 import uxIcon from "./assets/img/ux.jpg";
 import ciIcon from "./assets/img/ci.jpg";
+import apiCover from "./assets/img/apiCover.jpg";
 import gitInsta from "./assets/img/insta.png";
 import AppBarCusto from "./AppBarCusto";
 
@@ -28,6 +29,7 @@ const BasicCard = ({
 }) =>
   active ? (
     <Card className={classes.card}>
+    <Link to={course || evaluation} className={classes.noDecoration}>
       <CardActionArea>
         <CardMedia className={classes.media} image={icon} title="Git" />
         <CardContent>
@@ -37,9 +39,10 @@ const BasicCard = ({
           <Typography component="p">{description}</Typography>
         </CardContent>
       </CardActionArea>
+      </Link>
       <CardActions>
         {course ? (
-          <Link to={course}>
+          <Link to={course} className={classes.noDecoration}>
             <Button size="small" color="primary">
               Voir le cours
             </Button>
@@ -48,7 +51,7 @@ const BasicCard = ({
           ""
         )}
         {evaluation ? (
-          <Link to={evaluation}>
+          <Link to={evaluation} className={classes.noDecoration}>
             <Button size="small" color="primary">
               Les attentes
             </Button>
@@ -81,6 +84,14 @@ const Home = props => {
       evaluation: "/eval/git"
     },
     {
+      active: true,
+      title: "RESTful",
+      description: "Concepts de base",
+      icon: apiCover,
+      course: "/apiRest",
+      evaluation: ""
+    },
+    {
       active: false,
       title: "Integration continue",
       description: "Automatiser et systèmatiser les tâches pénibless",
@@ -94,8 +105,8 @@ const Home = props => {
       description:
         "Ce n'est pas l'idée qui compte mais comment vous la présentez.",
       icon: uxIcon,
-      course: "/git",
-      evaluation: "/eval/git"
+      course: "/ux",
+     // evaluation: "/eval/git"
     }
   ];
   const coursesFront = [
@@ -118,11 +129,11 @@ const Home = props => {
   ];
   const coursesBack = [
     {
-      active: false,
+      active: true,
       title: " Ma première API",
       description: "",
       icon: webIcon,
-      course: "",
+      course: "/node",
       evaluation: ""
     },
     {
@@ -144,6 +155,7 @@ const Home = props => {
   ];
 
   const { classes } = props;
+  console.log(classes.noDecoration);
   return (
     <div className={classes.root}>
       <AppBarCusto title="F2 - 2018" />

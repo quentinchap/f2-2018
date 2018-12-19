@@ -14,9 +14,10 @@ import {
   Text
 } from "spectacle";
 import theme from "../theme";
-import gitProcess from "../assets/img/git-process.png";
-import gitBranch from "../assets/img/git-branch.png";
-import gitFlow from "../assets/img/gitflow.png";
+import apiStruct2 from "../assets/img/apiStruct2.png";
+import apiStruct from "../assets/img/apiStruct.png";
+import apiRestful from "../assets/img/apiRestful.png";
+import apiResful2 from "../assets/img/apiResful2.png";
 
 export default class RestFullPrez extends React.Component {
   render() {
@@ -28,95 +29,162 @@ export default class RestFullPrez extends React.Component {
       >
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Git
+            Les API Restfull
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            Gardez la maîtrise de votre code version après version
+            Qu'est ce que c'est? Pourquoi les utiliser ?
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote size={6}>
-              Git est un logiciel de gestion de versions décentralisé. C'est un
-              logiciel libre créé par Linus Torvalds, [...] il s’agit du
-              logiciel de gestion de versions le plus populaire qui est utilisé
-              par plus de douze millions de personnes.
-            </Quote>
-            <Cite>Wikipédia</Cite>
-          </BlockQuote>
+          <p>
+            <strong>API</strong> Application Programming Interface
+            <br />
+            Moyen de communication entre deux applications
+            <br />
+            Moyen d'utiliser un framework
+          </p>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Pourquoi?
           </Heading>
           <List>
-            <ListItem>Collaboration</ListItem>
-            <ListItem>Retour en arrière</ListItem>
+            <ListItem>Utiliser des services externes</ListItem>
+            <ListItem>Mutualiser une traitement</ListItem>
+            <ListItem>Multi-device</ListItem>
             <ListItem>Automatisation</ListItem>
-            <ListItem>Audit</ListItem>
-            <ListItem>Travailler d'où vous voulez</ListItem>
+            <ListItem>Développement de service</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
-            Décentralisé
+            REST
           </Heading>
-          <img src={gitProcess} />
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Les commandes
-          </Heading>
-          <a
-            href="https://www.git-tower.com/blog/git-cheat-sheet"
-            target="blank"
-          >
-            Cheat sheet
-          </a>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Les branches
-          </Heading>
-          <img src={gitBranch} />
+          <p>
+            <strong>REST</strong> Representational state transfert, inventé en
+            2000.
+          </p>
           <List>
-            <ListItem>
-              <a href="https://medium.freecodecamp.org/git-rebase-and-the-golden-rule-explained-70715eccc372">
-                Les rebases
-              </a>
-            </ListItem>
-            <ListItem>
-              <a href="https://fr.atlassian.com/git/tutorials/merging-vs-rebasing">
-                Merging vs rebasing
-              </a>
-            </ListItem>
+            <ListItem>Basé sur http</ListItem>
+            <ListItem>Sans état</ListItem>
+            <ListItem>Orienté client-serveur</ListItem>
+            <ListItem>Uniforme</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
-            A vous de jouer
+            Les ressources
           </Heading>
           <List>
-            <ListItem>Créer un repo sur github ou gitlab</ListItem>
-            <ListItem>Réaliser votre premier commit/push</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Bonus: clients graphiques
-          </Heading>
-          <List>
-            <ListItem>Gitkarken</ListItem>
-            <ListItem>Tortoise git</ListItem>
-            <ListItem>Plugin IDE</ListItem>
+            <ListItem>Médias</ListItem>
+            <ListItem>Objets</ListItem>
+            <ListItem>Data</ListItem>
             <ListItem>...</ListItem>
           </List>
         </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Les requêtes
+          </Heading>
+          <img src={apiStruct} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Les réponses
+          </Heading>
+          <img src={apiStruct2} />
+        </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="tertiary" caps>
-            Bonus: GitFlow
+            Exemple de services disponible
           </Heading>
-          <img src={gitFlow} />
+          <List>
+            <ListItem>
+              <strong>Instagram</strong>: https://www.instagram.com/developer
+            </ListItem>
+            <ListItem>
+              <strong>Facebook</strong>:
+              https://developers.facebook.com/?locale=fr_FR
+            </ListItem>
+            <ListItem>
+              <strong>Github</strong>: https://developer.github.com/v3/
+            </ListItem>
+            <ListItem>...</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Restful - Utiliser des noms
+          </Heading>
+          <BlockQuote>
+            <Quote>/cars : ok </Quote>
+            <Quote>/getAllCars : ko </Quote>
+          </BlockQuote>
+          <br />
+          <img src={apiRestful} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Restful - Les sous ressources
+          </Heading>
+
+          <BlockQuote>
+            <Quote>
+              GET /cars/711/drivers/ Returns a list of drivers for car 711
+            </Quote>
+            <Quote>GET /cars/711/drivers/4 Returns driver #4 for car 711</Quote>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Restful - HATEOAS
+          </Heading>
+          <p>Hypermedia as the Engine of Application State</p>
+          <img src={apiResful2} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Restful - Filter, sorting, selection & pagin
+          </Heading>
+          <BlockQuote>
+            <Quote>
+              <p>GET /cars?color=red</p>
+              <p>GET /cars?sort=-manufactorer,+model</p>
+              <p>GET /cars?fields=manufacturer,model,id,color</p>
+              <p>GET /cars?offset=10&limit=5</p>
+            </Quote>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Restful - Version
+          </Heading>
+          <p>/api/v1/...</p>
+          <p>/api/v1.5/...</p>
+          <p>/api/v2/...</p>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Restful - Allow overriding HTTP method
+          </Heading>
+          <List>
+            <ListItem>GET ne doit pas générer d'update</ListItem>
+            <ListItem>Utiliser le pluriel</ListItem>
+            <ListItem>Headers Content-type et Accept</ListItem>
+            <ListItem>Implémenter les bons codes d'erreurs</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={6} textColor="primary" caps>
+            Restful - Autres régles
+          </Heading>
+          <List>
+            <ListItem>GET ne doit pas générer d'update</ListItem>
+            <ListItem>Utiliser le pluriel</ListItem>
+            <ListItem>Headers Content-type et Accept</ListItem>
+            <ListItem>Implémenter les bons codes d'erreurs</ListItem>
+            <ListItem>Autoriser la surcharge des méthodes HTTP X-HTTP-Method-Override</ListItem>
+          </List>
         </Slide>
       </Deck>
     );

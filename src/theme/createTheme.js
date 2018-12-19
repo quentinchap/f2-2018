@@ -5,6 +5,11 @@ const styles = (colors, fonts) => ({
   screen: screen(colors, fonts),
   print: print(),
   matUI: {
+    root: {
+      "@global a": {
+        textDecoration: "none!important"
+      }
+    },
     grow: {
       flexGrow: 1
     },
