@@ -1,9 +1,9 @@
 {
   "main.css": "/f2-2018/static/css/main.b5ae8d47.chunk.css",
-  "main.js": "/f2-2018/static/js/main.3999a54c.chunk.js",
-  "main.js.map": "/f2-2018/static/js/main.3999a54c.chunk.js.map",
-  "static/js/1.19d11f9d.chunk.js": "/f2-2018/static/js/1.19d11f9d.chunk.js",
-  "static/js/1.19d11f9d.chunk.js.map": "/f2-2018/static/js/1.19d11f9d.chunk.js.map",
+  "main.js": "/f2-2018/static/js/main.f373a901.chunk.js",
+  "main.js.map": "/f2-2018/static/js/main.f373a901.chunk.js.map",
+  "static/js/1.69bbe382.chunk.js": "/f2-2018/static/js/1.69bbe382.chunk.js",
+  "static/js/1.69bbe382.chunk.js.map": "/f2-2018/static/js/1.69bbe382.chunk.js.map",
   "runtime~main.js": "/f2-2018/static/js/runtime~main.2f5f0c3b.js",
   "runtime~main.js.map": "/f2-2018/static/js/runtime~main.2f5f0c3b.js.map",
   "static/media/react1DefThis.png": "/f2-2018/static/media/react1DefThis.7303bd0f.png",
@@ -67,8 +67,9 @@
   "static/media/apiStruct.png": "/f2-2018/static/media/apiStruct.1a807d9e.png",
   "static/media/apiRestful.png": "/f2-2018/static/media/apiRestful.c6b9351a.png",
   "static/media/apiResful2.png": "/f2-2018/static/media/apiResful2.fbb0cfbc.png",
+  "static/media/nodeUploadFile.png": "/f2-2018/static/media/nodeUploadFile.5950eebf.png",
   "static/css/main.b5ae8d47.chunk.css.map": "/f2-2018/static/css/main.b5ae8d47.chunk.css.map",
   "index.html": "/f2-2018/index.html",
-  "precache-manifest.84f775348649ed0e7dbc7fbcf4d77c05.js": "/f2-2018/precache-manifest.84f775348649ed0e7dbc7fbcf4d77c05.js",
+  "precache-manifest.066db0e9339851b84ad1d13a234cf785.js": "/f2-2018/precache-manifest.066db0e9339851b84ad1d13a234cf785.js",
   "service-worker.js": "/f2-2018/service-worker.js"
 }

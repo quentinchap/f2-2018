@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/react1Spread.5ebc6e52.png"
   },
   {
-    "revision": "3999a54cda2dd66fc6cf",
+    "revision": "f373a9012c605a09bb7f",
     "url": "/f2-2018/static/css/main.b5ae8d47.chunk.css"
   },
   {
-    "revision": "19d11f9d26e58be321ac",
-    "url": "/f2-2018/static/js/1.19d11f9d.chunk.js"
+    "revision": "69bbe382ee9633cc9e26",
+    "url": "/f2-2018/static/js/1.69bbe382.chunk.js"
   },
   {
     "revision": "2f5f0c3bd6e05dd253ba",
@@ -132,8 +132,8 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/react1ArrowFunction.af280a7c.png"
   },
   {
-    "revision": "3999a54cda2dd66fc6cf",
-    "url": "/f2-2018/static/js/main.3999a54c.chunk.js"
+    "revision": "f373a9012c605a09bb7f",
+    "url": "/f2-2018/static/js/main.f373a901.chunk.js"
   },
   {
     "revision": "afc0ee63ee32f1cc747f02a5452bfadc",
@@ -260,7 +260,11 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/apiResful2.fbb0cfbc.png"
   },
   {
-    "revision": "5e3c2ee0395a4f0e7233ca03decdd523",
+    "revision": "5950eebf5e5cc11e61481ee6ffcae97b",
+    "url": "/f2-2018/static/media/nodeUploadFile.5950eebf.png"
+  },
+  {
+    "revision": "ef74720485d6f2bdb396d99b849a8a91",
     "url": "/f2-2018/index.html"
   }
 ];
