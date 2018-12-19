@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "69cbb539d317adea0e2b3dd64255e4bd",
-    "url": "/f2-2018/static/media/react1.69cbb539.png"
+    "revision": "5ebc6e52e156af5a1a95495872640084",
+    "url": "/f2-2018/static/media/react1Spread.5ebc6e52.png"
   },
   {
-    "revision": "41e337e50737fa6fc49b",
-    "url": "/f2-2018/static/css/main.b5134574.chunk.css"
+    "revision": "3999a54cda2dd66fc6cf",
+    "url": "/f2-2018/static/css/main.b5ae8d47.chunk.css"
   },
   {
-    "revision": "b755e4cc0e5f193ef2fc",
-    "url": "/f2-2018/static/js/1.b755e4cc.chunk.js"
+    "revision": "19d11f9d26e58be321ac",
+    "url": "/f2-2018/static/js/1.19d11f9d.chunk.js"
   },
   {
     "revision": "2f5f0c3bd6e05dd253ba",
@@ -18,6 +18,10 @@ self.__precacheManifest = [
   {
     "revision": "943e9b3e3d9f94593564a3e6c380265e",
     "url": "/f2-2018/static/media/html.943e9b3e.png"
+  },
+  {
+    "revision": "5393bfc136c5c380489d99ad3d2c06dc",
+    "url": "/f2-2018/static/media/nodeInit1.5393bfc1.png"
   },
   {
     "revision": "f4b8238b8227921d4b6822c2b4d1dd27",
@@ -64,6 +68,10 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/ci.f7d68310.jpg"
   },
   {
+    "revision": "9ca0d82ef09c7c84081e0e15205cd81e",
+    "url": "/f2-2018/static/media/apiCover.9ca0d82e.jpg"
+  },
+  {
     "revision": "756e454249e65f0738a1101c5f957115",
     "url": "/f2-2018/static/media/insta.756e4542.png"
   },
@@ -100,8 +108,8 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/webSchema1.cbd1e783.png"
   },
   {
-    "revision": "41e337e50737fa6fc49b",
-    "url": "/f2-2018/static/js/main.41e337e5.chunk.js"
+    "revision": "69cbb539d317adea0e2b3dd64255e4bd",
+    "url": "/f2-2018/static/media/react1.69cbb539.png"
   },
   {
     "revision": "247b2165207ca7009e63645dd9438eaf",
@@ -124,8 +132,8 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/react1ArrowFunction.af280a7c.png"
   },
   {
-    "revision": "5ebc6e52e156af5a1a95495872640084",
-    "url": "/f2-2018/static/media/react1Spread.5ebc6e52.png"
+    "revision": "3999a54cda2dd66fc6cf",
+    "url": "/f2-2018/static/js/main.3999a54c.chunk.js"
   },
   {
     "revision": "afc0ee63ee32f1cc747f02a5452bfadc",
@@ -200,7 +208,59 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/bets.c130b8ec.pdf"
   },
   {
-    "revision": "2cd01b2c03d049cb7e56ca201f859285",
+    "revision": "b19dac57641d019c69b1243faeb06371",
+    "url": "/f2-2018/static/media/nodeHttp1.b19dac57.png"
+  },
+  {
+    "revision": "12e1bc8e56c0be5ff57304ad8d96f0c9",
+    "url": "/f2-2018/static/media/nodeDummyBdd.12e1bc8e.png"
+  },
+  {
+    "revision": "ce329cb300896efb7fe2459e959643d5",
+    "url": "/f2-2018/static/media/nodeAutoReload.ce329cb3.png"
+  },
+  {
+    "revision": "362b896900d5e8d644a91fd3b85817f9",
+    "url": "/f2-2018/static/media/nodeFirstRoute.362b8969.png"
+  },
+  {
+    "revision": "4cede17d47a770068471126610913aa0",
+    "url": "/f2-2018/static/media/nodeFirstPost.4cede17d.png"
+  },
+  {
+    "revision": "770b7e123f3e6a867547ce1ded0c493c",
+    "url": "/f2-2018/static/media/nodeGetPost.770b7e12.png"
+  },
+  {
+    "revision": "357875beacd6df33e80700f646c4f3c5",
+    "url": "/f2-2018/static/media/nodeMiddleware.357875be.png"
+  },
+  {
+    "revision": "32e8ef03cd8172bba06a8280e28d54fa",
+    "url": "/f2-2018/static/media/apiProjectStruct.32e8ef03.png"
+  },
+  {
+    "revision": "b048d62ed18056b5f0bea9b3dab2a9c5",
+    "url": "/f2-2018/static/media/nodeStruct2.b048d62e.png"
+  },
+  {
+    "revision": "08669dc44718f95e0be1070793293d4e",
+    "url": "/f2-2018/static/media/apiStruct2.08669dc4.png"
+  },
+  {
+    "revision": "1a807d9eb58108e4a66fc129cc2b5f27",
+    "url": "/f2-2018/static/media/apiStruct.1a807d9e.png"
+  },
+  {
+    "revision": "c6b9351a5dec29d2bab792d427833c09",
+    "url": "/f2-2018/static/media/apiRestful.c6b9351a.png"
+  },
+  {
+    "revision": "fbb0cfbc9fe27069f2b84da0b8490407",
+    "url": "/f2-2018/static/media/apiResful2.fbb0cfbc.png"
+  },
+  {
+    "revision": "5e3c2ee0395a4f0e7233ca03decdd523",
     "url": "/f2-2018/index.html"
   }
 ];
