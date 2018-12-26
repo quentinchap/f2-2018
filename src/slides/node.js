@@ -16,7 +16,7 @@ import {
 import theme from "../theme";
 import nodeHttp1 from "../assets/img/nodeHttp1.png";
 import nodeInit1 from "../assets/img/nodeInit1.png";
-import nodeInit2 from "../assets/img/nodeInit1.png";
+import nodeInit2 from "../assets/img/nodeInit2.png";
 import nodeDummyBdd from "../assets/img/nodeDummyBdd.png";
 import nodeAutoReload from "../assets/img/nodeAutoReload.png";
 import nodeFirstRoute from "../assets/img/nodeFirstRoute.png";
