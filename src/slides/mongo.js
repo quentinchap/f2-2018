@@ -17,6 +17,197 @@ import theme from "../theme";
 import { withStyles } from "@material-ui/core";
 import column1 from "../assets/img/mongo/column1.png";
 import column2 from "../assets/img/mongo/column2.png";
+import cap from "../assets/img/mongo/cap.png";
+import normalization from "../assets/img/mongo/normalization.png";
+import normalization2 from "../assets/img/mongo/normalization2.png";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+
+let conf = `
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
+mongoose.connect(
+  process.env.MONGO,
+  { useNewUrlParser: true }
+);
+
+let db = mongoose.connection;
+db.on("error", console.error.bind(console, "error:"));
+db.once("open", function() {
+
+  app.use("/", routes);
+  let listener = app.listen(process.env.PORT, function() {
+    console.log("Your run on " + listener.address().port);
+  });
+});
+`;
+
+let postModel = `
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
+
+var PostSchema = new Schema({
+  description: String,
+  author: {
+    name: String,
+    ref: { type: Schema.Types.ObjectId, ref: "User" },
+  }
+});
+
+PostSchema.index({ name: 1});
+let Post = mongoose.model("Post", PostSchema);
+
+export default Post;
+`;
+
+let userModel = `
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
+
+var UserSchema = new Schema({
+  name: String
+});
+
+UserSchema.index({ name: 1});
+let User = mongoose.model("User", UserSchema);
+
+export default User;
+`;
+let userModelUnique = `
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
+
+var UserSchema = new Schema({
+  name: String,
+  pseudo: {
+    type: String,
+    index: true,
+    unique: true
+  }
+});
+
+UserSchema.index({ name: 1 });
+let User = mongoose.model("User", UserSchema);
+User.createIndexes();
+
+export default User;
+`;
+
+let createPostService = `  
+import Post from "./model";
+export async function createPost(post) {
+  if (post) {
+    if (!post._id) {
+      return Post.create({ ...post });
+    }
+  }
+}`;
+
+let createPostRoute = `
+import express from 'express';
+import * as service from './service';
+
+const posts = express.Router();
+posts.use(bodyParser.json());
+
+posts.post("/posts", (req, res) => {
+  service.createPost(req.body).then(
+    users => res.status(200).json(users),
+    err => {
+      console.error(err);
+      res.status(500).send("error");
+      return;
+    }
+  );
+});`;
+
+let getPostService = `  
+import Post from "./model";
+
+export async function getByPage(page, per_page) {
+  var start = (parseInt(page) - 1) * parseInt(per_page);
+  let result = await Post.find({})
+    .populate({
+      path: "author.ref",
+      model: "User"
+    })
+    .skip(start)
+    .limit(parseInt(per_page));
+  return result;
+}
+`;
+
+let getPostRoute = `
+import express from 'express';
+import * as service from './service';
+
+const posts = express.Router();
+
+posts.get("/posts", (req, res) => {
+  service
+    .getByPage(req.query.page || 1, req.query.per_page || 10)
+    .then(posts => res.status(200).json({ posts }));
+});
+`;
+
+let createUserService = `  
+import User from "./model";
+export async function createUser(user) {
+  if (user) {
+    if (!user._id) {
+      console.log("[user] - Creation");
+      return User.create({ ...user });
+    }
+  }
+};`;
+
+let createUserRoute = `
+import express from 'express';
+import * as service from './service';
+
+const users = express.Router();
+users.use(bodyParser.json());
+
+users.post("/users", (req, res) => {
+  service.createUser(req.body).then(
+    users => res.status(200).json(users),
+    err => {
+      console.error(err);
+      res.status(500).send("error");
+      return;
+    }
+  );
+});`;
+
+let getUserService = `  
+import User from "./model";
+export async function getByPage(page, per_page) {
+  var start = (parseInt(page) - 1) * parseInt(per_page);
+  let result = await User.find({})
+    .skip(start)
+    .limit(parseInt(per_page));
+  return result;
+};
+`;
+
+let getUserRoute = `
+import express from 'express';
+import * as service from './service';
+
+const users = express.Router();
+
+users.get("/users", (req, res) => {
+  // console.log(req,res);
+  service
+    .getByPage(req.query.page || 1, req.query.per_page || 10)
+    .then(users => res.status(200).json({ users }));
+});
+`;
+
+let envFile = `
+MONGO=mongodb://<user>:<password>@url_BDD_mongo:port_BDD
+PORT=5000`;
 
 const MongoPrez = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
@@ -94,13 +285,16 @@ const MongoPrez = ({ classes }) => (
         Graphes
       </Heading>
       <p className={classes.leftAlign}>
-        <strong>Description</strong> Stockage sous forme de graphes. Sauvegarde de noeuds, liens et de propriétés.
+        <strong>Description</strong> Stockage sous forme de graphes. Sauvegarde
+        de noeuds, liens et de propriétés.
       </p>
       <p className={classes.leftAlign}>
-        <strong>Avantages</strong> Problèmatiques typé analyse de graphes (distances, liens, etc.)
+        <strong>Avantages</strong> Problèmatiques typé analyse de graphes
+        (distances, liens, etc.)
       </p>
       <p className={classes.leftAlign}>
-        <strong>Inconvénients</strong> Compliqué à appréhender et pour des usages très spécifiques
+        <strong>Inconvénients</strong> Compliqué à appréhender et pour des
+        usages très spécifiques
       </p>
       <p className={classes.leftAlign}>
         <strong>Techno.</strong> Neo4J
@@ -127,98 +321,75 @@ const MongoPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
       <Heading size={6} textColor="primary" caps>
-        votre première application
+        Pourquoi le relationnel à encore sa place ?
       </Heading>
 
-      <p>
-        Création d'un .gitignore{" "}
-        <a href="https://github.com/github/gitignore/blob/master/Node.gitignore">
-          avec ce modèle
-        </a>
-      </p>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Données factices
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Auto reload
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Première route GET
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Première route POST
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Utilisation de paramètres
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Exercice
-      </Heading>
-      Créez vos premières api GET et POST.
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Les middlewares
-      </Heading>
-      <p>
-        Micro fonctionnalitées qui s'enchaînent en partageant jusqu'à quatres
-        paramètres
-      </p>
       <List>
-        <ListItem>
-          <strong>err</strong> Les erreurs
-        </ListItem>
-        <ListItem>
-          <strong>req</strong> La requête
-        </ListItem>
-        <ListItem>
-          <strong>res</strong> La réponse
-        </ListItem>
-        <ListItem>
-          <strong>next</strong> Callback vers la prochaine fonction
-        </ListItem>
+        <ListItem>Jointures</ListItem>
+        <ListItem>Requêtes complexes de haut niveau</ListItem>
+        <ListItem>Intégrité des données</ListItem>
       </List>
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
-        Votre premier middleware
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Organisation projet
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Organisation projet
+        ACID
       </Heading>
       <List>
         <ListItem>
-          <strong>Controllers</strong> routes & logique
+          <strong>Atomicité</strong> transaction OK ou KO mais pas partielle
         </ListItem>
         <ListItem>
-          <strong>Utils</strong> code mutualisé
+          <strong>Cohérence</strong> Cohérence de la BDD avant et après
+          transaction
         </ListItem>
         <ListItem>
-          <strong>Middlewares</strong> Middleware custom
+          <strong>Isolation</strong> Modifications visible qu'après validation
         </ListItem>
         <ListItem>
-          <strong>Models</strong> Représentation de la donnée.
+          <strong>Durabilité</strong> Etat de la base permanent après
+          modification
         </ListItem>
       </List>
+      <p>Pb: Peu adapté au contexte distribuée</p>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        BASE
+      </Heading>
+      <List>
+        <ListItem>
+          <strong>Basically Available</strong> Garantir un taux de réponse peu
+          importe la charge
+        </ListItem>
+        <ListItem>
+          <strong>Soft-state</strong> La base n'a pas à être cohérente en
+          permanence.
+        </ListItem>
+        <ListItem>
+          <strong>Eventually consistent</strong> Etat cohérent à moyen/long
+          terme
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Thèorême de CAP
+      </Heading>
+      <img src={cap} />
+      <p>2000, Eric A. Brewer</p>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        MongoDB
+      </Heading>
+      <BlockQuote>
+        <Quote>
+          système de gestion de base de données orientée documents,
+          répartissable sur un nombre quelconque d'ordinateurs et ne nécessitant
+          pas de schéma prédéfini des données. Il est écrit en C++.
+        </Quote>
+        <Cite>Wikipédia</Cite>
+      </BlockQuote>
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
@@ -259,21 +430,173 @@ const MongoPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
-        "demo"
-      </Heading>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        TP
+        Dénormalisation
       </Heading>
       <List>
-        <ListItem>npm install mongoose --save</ListItem>
+        <ListItem>Fréquence de mises à jour</ListItem>
+        <ListItem>Données beaucoup utilisées</ListItem>
+        <ListItem>Données indépendantes</ListItem>
+        <ListItem>Relations 1-n / 1-n</ListItem>
       </List>
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
-        Gestion de fichiers
+        Dénormalisation
       </Heading>
+      <img src={normalization} />
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Dénormalisation
+      </Heading>
+      <img src={normalization2} />
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose
+      </Heading>
+      <h5>Installation</h5>
+      <LiveProvider code="npm i dotenv --savedev">
+        <LiveEditor />
+      </LiveProvider>
+      <LiveProvider code="npm i mongoose --save">
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose
+      </Heading>
+      <LiveProvider code={conf}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose
+      </Heading>
+      <h5>.env</h5>
+      <LiveProvider code={envFile}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Model simple
+      </Heading>
+      <LiveProvider code={userModel}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Get service
+      </Heading>
+      <LiveProvider code={getUserService}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Get route
+      </Heading>
+      <LiveProvider code={getUserRoute}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Creation service
+      </Heading>
+      <LiveProvider code={createUserService}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Creation route
+      </Heading>
+      <LiveProvider code={createUserRoute}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Model complex
+      </Heading>
+      <LiveProvider code={postModel}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Get service
+      </Heading>
+      <LiveProvider code={getPostService}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Get route
+      </Heading>
+      <LiveProvider code={getPostRoute}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Creation service
+      </Heading>
+      <LiveProvider code={createPostService}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Creation route
+      </Heading>
+      <LiveProvider code={createPostRoute}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Mongoose - Unique
+      </Heading>
+      <LiveProvider code={userModelUnique}>
+        <LiveEditor />
+      </LiveProvider>
+    </Slide>
+    <Slide transition={["zoom"]} bgColor="primary">
+      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+        TP
+      </Heading>
+    </Slide>
+    <Slide transition={["zoom"]} bgColor="primary">
+      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+        Maitrisez votre BDD - Part 2
+      </Heading>
+      <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+        Choisir la bonne technologie
+      </Text>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Vocabulaire
+      </Heading>
+      <List>
+        <ListItem>
+          <strong>Sharding</strong> Technique de distribution de donnée.
+        </ListItem>
+        <ListItem>
+          <strong>Chunk</strong> Fragment de donnée.
+        </ListItem>
+        <ListItem>
+          <strong>Elasticité</strong> Capacité à s'adapter dynamiquement au
+          nombre de serveur.
+        </ListItem>
+      </List>
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
@@ -281,7 +604,9 @@ const MongoPrez = ({ classes }) => (
       </Heading>
       <List>
         <ListItem>
-          <a href="https://blog.talanlabs.com/etude-comparative-bdd-relationnelle-versus-nosql/">Comparatif techno BDD</a>
+          <a href="https://blog.talanlabs.com/etude-comparative-bdd-relationnelle-versus-nosql/">
+            Comparatif techno BDD
+          </a>
         </ListItem>
         <ListItem>
           <a href="https://mongoosejs.com">Doc mongoose</a>
