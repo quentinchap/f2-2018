@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/react1ArrowFunction.af280a7c.png"
   },
   {
-    "revision": "1f6ecc49c792ba20d513",
+    "revision": "f01be1894231629544c7",
     "url": "/f2-2018/static/css/main.f52ccfd9.chunk.css"
   },
   {
@@ -148,8 +148,8 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/react1-class.fd3f32f8.png"
   },
   {
-    "revision": "1f6ecc49c792ba20d513",
-    "url": "/f2-2018/static/js/main.1f6ecc49.chunk.js"
+    "revision": "f01be1894231629544c7",
+    "url": "/f2-2018/static/js/main.f01be189.chunk.js"
   },
   {
     "revision": "5ebc6e52e156af5a1a95495872640084",
@@ -292,7 +292,7 @@ self.__precacheManifest = [
     "url": "/f2-2018/static/media/nodeUploadFile.5950eebf.png"
   },
   {
-    "revision": "308761ec549ab8a8cb1ded323ff718f2",
+    "revision": "24363dee8986a458e79c3d21c89af36d",
     "url": "/f2-2018/index.html"
   }
 ];
