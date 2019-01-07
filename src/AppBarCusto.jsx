@@ -24,11 +24,11 @@ const AppBarCusto = props => {
             <Icon className={classes.icon}>home</Icon>
           </Link>
         </Button>
-        <Button color="inherit" className={classes.noDecoration}>
-          <a href="https://goo.gl/forms/AMKLtrr03F68ZIcr2">
+        <a href="https://goo.gl/forms/AMKLtrr03F68ZIcr2">
+          <Button color="inherit" className={classes.noDecoration}>
             <Icon className={classes.icon}>link</Icon>
-          </a>
-        </Button>
+          </Button>
+        </a>
       </Toolbar>
     </AppBar>
   );

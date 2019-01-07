@@ -573,31 +573,6 @@ const MongoPrez = ({ classes }) => (
         TP
       </Heading>
     </Slide>
-    <Slide transition={["zoom"]} bgColor="primary">
-      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-        Maitrisez votre BDD - Part 2
-      </Heading>
-      <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-        Choisir la bonne technologie
-      </Text>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Vocabulaire
-      </Heading>
-      <List>
-        <ListItem>
-          <strong>Sharding</strong> Technique de distribution de donnée.
-        </ListItem>
-        <ListItem>
-          <strong>Chunk</strong> Fragment de donnée.
-        </ListItem>
-        <ListItem>
-          <strong>Elasticité</strong> Capacité à s'adapter dynamiquement au
-          nombre de serveur.
-        </ListItem>
-      </List>
-    </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Liens utiles

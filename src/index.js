@@ -14,6 +14,7 @@ import UxPrez from './slides/ux';
 import NodePrez from './slides/node';
 import RestFullPrez from './slides/RestFull';
 import MongoPrez from './slides/mongo';
+import MongoPrez2 from './slides/mongo2';
 
 ReactDOM.render(
   <Router basename='/f2-2018/'>
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Route path="/react1/" component={React1Prez} />
       <Route path="/node/" component={NodePrez} />
       <Route path="/mongo/" component={MongoPrez} />
+      <Route path="/mongo2/" component={MongoPrez2} />
       <Route path="/apiRest/" component={RestFullPrez} />
       <Route path="/html/" component={HtmlPrez} />
       <Route path="/ux/" component={UxPrez} />

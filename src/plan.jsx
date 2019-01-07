@@ -78,10 +78,18 @@ export const coursesBack = [
   },
   {
     active: true,
-    title: "Utilisation d'une BDD",
-    description: "Comment décrire une page web static simplement",
+    title: "BDD NoSql - part 1",
+    description: "NoSQL, MongoDB & Mongoose",
     icon: mongoBack,
     course: "/mongo",
+    evaluation: ""
+  },
+  {
+    active: true,
+    title: "BDD NoSql - part 2",
+    description: "Technologies et outils",
+    icon: mongoBack,
+    course: "/mongo2",
     evaluation: ""
   },
   {
