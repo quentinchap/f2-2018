@@ -19,6 +19,8 @@ import column1 from "../assets/img/mongo/column1.png";
 import column2 from "../assets/img/mongo/column2.png";
 import cap from "../assets/img/mongo/cap.png";
 import normalization from "../assets/img/mongo/normalization.png";
+import hdfs from "../assets/img/mongo/hdfs.png";
+import clusteredIndex from "../assets/img/mongo/clusteredIndex.png";
 import normalization2 from "../assets/img/mongo/normalization2.png";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
@@ -572,6 +574,78 @@ const MongoPrez = ({ classes }) => (
       <Heading size={1} fit caps lineHeight={1} textColor="secondary">
         TP
       </Heading>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Généralités
+      </Heading>
+      <p>
+        <strong>But d'un BDD</strong> Fournir des réponses à des requêtes. Mise
+        en place d'index pour optimiser ces requêtes.
+      </p>
+      <p>
+        <strong>Comment distribuer les informations ?</strong>
+      </p>
+      <p>
+        <strong>
+          Comment conserver un système d'indexation garantissant les performaces
+          ?
+        </strong>
+      </p>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Vocabulaire
+      </Heading>
+      <List>
+        <ListItem>
+          <strong>Les arbres</strong> Structure courante de l'index.
+        </ListItem>
+        <ListItem>
+          <strong>Sharding</strong> Technique de distribution de donnée.
+        </ListItem>
+        <ListItem>
+          <strong>Chunk</strong> Fragment de donnée.
+        </ListItem>
+        <ListItem>
+          <strong>Elasticité</strong> Capacité à s'adapter dynamiquement au
+          nombre de serveur.
+        </ListItem>
+        <ListItem>
+          <strong>Hachage</strong> Structure de données de type clé-valeur
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        HDFS
+      </Heading>
+      <img src={hdfs} />
+      <p>Spark, HBase, ect.</p>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Clustered index
+      </Heading>
+      <img src={clusteredIndex} />
+      <p>Mongo DB, ect.</p>
+      <p>replica set</p>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Table de hachage distribuée (DHT)
+      </Heading>
+      <p>Avantages</p>
+      <List>
+        <ListItem>
+          Distribution maximale qui est capable de s'auto-gérer
+        </ListItem>
+        <ListItem>Elasticité simplifiée</ListItem>
+      </List>
+      <p>Inconvénients</p>
+      <List>
+        <ListItem>Difficile de se prémunir contre les pannes</ListItem>
+      </List>
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>

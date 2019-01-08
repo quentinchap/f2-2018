@@ -10,6 +10,7 @@ const styles = (colors, fonts) => ({
         textDecoration: "none!important"
       }
     },
+    
     grow: {
       flexGrow: 1
     },

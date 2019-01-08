@@ -4,6 +4,7 @@ import htmlIcon from "./assets/img/html.png";
 import webIcon from "./assets/img/web.jpg";
 import uxIcon from "./assets/img/ux.jpg";
 import ciIcon from "./assets/img/ci.jpg";
+import testIcon from "./assets/img/test.jpeg";
 import apiCover from "./assets/img/apiCover.jpg";
 
 export const coursesTools = [
@@ -47,6 +48,15 @@ export const coursesTools = [
     icon: uxIcon,
     course: "/ux"
     // evaluation: "/eval/git"
+  },
+  {
+    active: false,
+    title: "La théorie des tests",
+    description:
+      "Un bon test passe par une bonne stratégie de test",
+    icon: testIcon,
+    course: "/ux"
+    // evaluation: "/eval/git"
   }
 ];
 export const coursesFront = [
@@ -65,6 +75,14 @@ export const coursesFront = [
     icon: webIcon,
     course: "/react1",
     evaluation: ""
+  },
+  {
+    active: true,
+    title: "ReactJs - part 2",
+    description: "L'asynchrone",
+    icon: webIcon,
+    course: "/react-async",
+    evaluation: ""
   }
 ];
 export const coursesBack = [
@@ -78,18 +96,26 @@ export const coursesBack = [
   },
   {
     active: true,
-    title: "BDD NoSql - part 1",
+    title: "BDD NoSql",
     description: "NoSQL, MongoDB & Mongoose",
     icon: mongoBack,
     course: "/mongo",
     evaluation: ""
   },
   {
-    active: true,
+    active: false,
     title: "BDD NoSql - part 2",
     description: "Technologies et outils",
     icon: mongoBack,
     course: "/mongo2",
+    evaluation: ""
+  },
+  {
+    active: false,
+    title: "Test API",
+    description: "Comment test ces APIs",
+    icon: testIcon,
+    course: "/test-api",
     evaluation: ""
   },
   {

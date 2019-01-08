@@ -10,11 +10,13 @@ import TPEval from "./eval/tp";
 import HtmlEval from "./eval/html";
 import BasePrez from './slides/base';
 import React1Prez from './slides/react1';
+import React2Prez from './slides/react2';
 import UxPrez from './slides/ux';
 import NodePrez from './slides/node';
 import RestFullPrez from './slides/RestFull';
 import MongoPrez from './slides/mongo';
 import MongoPrez2 from './slides/mongo2';
+import testApi from "./slides/testApi";
 
 ReactDOM.render(
   <Router basename='/f2-2018/'>
@@ -23,6 +25,8 @@ ReactDOM.render(
       <Route path="/f2-2018/" exact component={Home} />
       <Route path="/git/" component={GitPrez} />
       <Route path="/react1/" component={React1Prez} />
+      <Route path="/react-async/" component={React2Prez} />
+      <Route path="/test-api/" component={testApi} />
       <Route path="/node/" component={NodePrez} />
       <Route path="/mongo/" component={MongoPrez} />
       <Route path="/mongo2/" component={MongoPrez2} />
