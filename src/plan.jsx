@@ -5,6 +5,7 @@ import webIcon from "./assets/img/web.jpg";
 import uxIcon from "./assets/img/ux.jpg";
 import ciIcon from "./assets/img/ci.jpg";
 import testIcon from "./assets/img/test.jpeg";
+import securityIcon from "./assets/img/auth/security.jpeg";
 import apiCover from "./assets/img/apiCover.jpg";
 
 export const coursesTools = [
@@ -120,10 +121,10 @@ export const coursesBack = [
   },
   {
     active: false,
-    title: "Technique d'authentification",
-    description: "Comment décrire une page web static simplement",
-    icon: htmlIcon,
-    course: "/html",
-    evaluation: "/eval/html-eval"
+    title: "Techniques d'authentification",
+    description: "Contrôler l'accés de vos APIs",
+    icon: securityIcon,
+    course: "/auth",
+    evaluation: ""
   }
 ];

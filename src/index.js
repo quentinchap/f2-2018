@@ -17,6 +17,7 @@ import RestFullPrez from './slides/RestFull';
 import MongoPrez from './slides/mongo';
 import MongoPrez2 from './slides/mongo2';
 import testApi from "./slides/testApi";
+import AuthPrez from "./slides/auth";
 
 ReactDOM.render(
   <Router basename='/f2-2018/'>
@@ -33,6 +34,7 @@ ReactDOM.render(
       <Route path="/apiRest/" component={RestFullPrez} />
       <Route path="/html/" component={HtmlPrez} />
       <Route path="/ux/" component={UxPrez} />
+      <Route path="/auth/" component={AuthPrez} />
       <Route path="/base/" component={BasePrez} />
       <Route path="/eval/html/" component={HtmlEval} />
       <Route path="/eval/git/" component={GitEval} />

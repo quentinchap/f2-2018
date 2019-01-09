@@ -3,25 +3,17 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text
 } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
-import hdfs from "../assets/img/mongo/hdfs.png";
-import clusteredIndex from "../assets/img/mongo/clusteredIndex.png";
-import column2 from "../assets/img/mongo/column2.png";
-import cap from "../assets/img/mongo/cap.png";
-import normalization from "../assets/img/mongo/normalization.png";
-import normalization2 from "../assets/img/mongo/normalization2.png";
-import { LiveProvider, LiveEditor, LivePreview, LiveError } from "react-live";
+import simple_req from "../assets/img/reactAsync/simple_req.png";
+import { LiveProvider, LiveEditor, LivePreview } from "react-live";
 
 let callBackExample = `setTimeout(function(){ alert("Hello"); }, 3000);`;
 let promiseExample = `
@@ -301,10 +293,22 @@ const res = await API.delete('/users/\${this.state.id}');
         <LiveEditor />
       </LiveProvider>
     </Slide>
-    <Slide transition={["zoom"]} bgColor="primary">
-      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-        TP
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        CORS - Cross-origin resource sharing
       </Heading>
+      <List>
+        <ListItem>
+          Mécanisme de sécurité visant à mettre sous contrôle les requêtes émise
+          d'un domaine vers un second domaine.
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="primary">
+      <Heading size={6} textColor="tertiary" caps>
+        CORS - Cross-origin resource sharing
+      </Heading>
+      <img src={simple_req} />
     </Slide>
   </Deck>
 );
