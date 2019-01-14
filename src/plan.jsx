@@ -120,7 +120,7 @@ export const coursesBack = [
     evaluation: ""
   },
   {
-    active: false,
+    active: true,
     title: "Techniques d'authentification",
     description: "Contrôler l'accés de vos APIs",
     icon: securityIcon,

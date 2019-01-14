@@ -5,51 +5,7 @@ import React from "react";
 import { Deck, Heading, ListItem, List, Slide, Text } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
-import simple_req from "../assets/img/reactAsync/simple_req.png";
-import { LiveProvider, LiveEditor, LivePreview } from "react-live";
-
-let callBackExample = `setTimeout(function(){ alert("Hello"); }, 3000);`;
-let promiseExample = `
-let promise1 = new Promise(
-  (resolve, reject) =>
-  {
-    resolve('Success!');    
-  }
-  //reject('error');
-  );
-
-promise1.then(
-  res => {
-    console.log(res);  
-  }
-  ,err => {
-    console.error(err);
-  }
-);
-`;
-let promiseCatchExample = `
-promise1.then(
-  res => {
-    console.log(res);  
-  }
-  ,err => {
-    console.error(err);
-  }
-)
-.then(...)
-.catch(error => {
-  handleError(error);
-});
-`;
-
-let asyncExample = `async function myAsyncF() {
-  try {
-      const result = await promise;
-  } catch (err) {
-      handleError(err);
-  }
-  return 'finish'; 
-}`;
+import sessionAuth from "../assets/img/auth/sessionAuth.png";
 
 const AuthPrez = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
@@ -70,16 +26,41 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         Session
       </Heading>
+      <img src={sessionAuth} />
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Session
+      </Heading>
+      <List>
+        <ListItem>Simple à implémenter</ListItem>
+        <ListItem>Utilise la session (cookie server-side)</ListItem>
+        <ListItem>Statefull => difficilement scalable</ListItem>
+        <ListItem>Vol de session</ListItem>
+      </List>
     </Slide>
     <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Basic Auth
       </Heading>
+      <p>Ajout d'un header</p>
+      <p>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</p>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Basic Auth
+      </Heading>
+      <List>
+        <ListItem>Simple à implémenter</ListItem>
+        <ListItem>Vol de token</ListItem>
+        <ListItem>Passage du mot de passe et du login à chaque requête</ListItem>
+      </List>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         API Keys
       </Heading>
+      <p>Comme basic mais en passant par un token qui sera généré et fournis à l'utilisateur</p>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
