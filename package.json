@@ -5,14 +5,14 @@
   "homepage": "https://quentinchap.github.io/f2-2018",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.6.1",
-    "@material-ui/icons": "^3.0.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "@material-ui/core": "^3.8.3",
+    "@material-ui/icons": "^3.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-live": "^1.12.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "spectacle-scripts": "^2.0.1",
+    "spectacle-scripts": "^2.2.0",
     "webpack": "4.19.1"
   },
   "scripts": {

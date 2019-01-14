@@ -18,6 +18,7 @@ import MongoPrez from './slides/mongo';
 import MongoPrez2 from './slides/mongo2';
 import testApi from "./slides/testApi";
 import AuthPrez from "./slides/auth";
+import NpmPrez from "./slides/npm";
 
 ReactDOM.render(
   <Router basename='/f2-2018/'>
@@ -25,6 +26,7 @@ ReactDOM.render(
       <Route path="/" exact component={Home} />
       <Route path="/f2-2018/" exact component={Home} />
       <Route path="/git/" component={GitPrez} />
+      <Route path="/npm/" component={NpmPrez} />
       <Route path="/react1/" component={React1Prez} />
       <Route path="/react-async/" component={React2Prez} />
       <Route path="/test-api/" component={testApi} />
