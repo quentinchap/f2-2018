@@ -10,7 +10,7 @@ const styles = (colors, fonts) => ({
         textDecoration: "none!important"
       }
     },
-    
+
     grow: {
       flexGrow: 1
     },
@@ -45,6 +45,10 @@ const styles = (colors, fonts) => ({
     },
     media: {
       height: 200
+    },
+    mediaContain: {
+      height: 200,
+      backgroundSize: "contain"
     },
     root: {
       flexGrow: 1

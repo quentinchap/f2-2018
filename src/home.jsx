@@ -11,11 +11,11 @@ import { withStyles } from "@material-ui/core";
 import gitInsta from "./assets/img/insta.png";
 import AppBarCusto from "./AppBarCusto";
 import BasicCard from "./BasicCard";
-import { coursesTools, coursesFront, coursesBack } from "./plan";
+import { coursesTools, coursesFront, coursesBack, livres } from "./plan";
 
 const Home = props => {
   const { classes } = props;
-  
+
   return (
     <div className={classes.root}>
       <AppBarCusto title="F2 - 2018" />
@@ -60,6 +60,7 @@ const Home = props => {
             icon={c.icon}
             course={c.course}
             evaluation={c.evaluation}
+            contain={c.contain}
           />
         ))}
         <div className={classes.title}>
@@ -77,6 +78,7 @@ const Home = props => {
             icon={c.icon}
             course={c.course}
             evaluation={c.evaluation}
+            contain={c.contain}
           />
         ))}
 
@@ -95,6 +97,27 @@ const Home = props => {
             icon={c.icon}
             course={c.course}
             evaluation={c.evaluation}
+            contain={c.contain}
+          />
+        ))}
+
+        <div className={classes.title}>
+          <Typography variant="h4" gutterBottom>
+            Bibliographie pour aller plus loin
+          </Typography>
+        </div>
+        {livres.map(c => (
+          <BasicCard
+            key={c.title}
+            active={c.active}
+            classes={classes}
+            title={c.title}
+            description={c.description}
+            icon={c.icon}
+            course={c.course}
+            evaluation={c.evaluation}
+            contain={c.contain}
+            shop={c.shop}
           />
         ))}
       </div>

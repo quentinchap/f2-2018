@@ -18,13 +18,19 @@ const BasicCard = ({
   description,
   icon,
   course,
-  evaluation
+  evaluation,
+  contain,
+  shop
 }) =>
   active ? (
     <Card className={classes.card}>
       <Link to={course || evaluation} className={classes.noDecoration}>
         <CardActionArea>
-          <CardMedia className={classes.media} image={icon} title="Git" />
+          <CardMedia
+            className={contain ? classes.mediaContain : classes.media}
+            image={icon}
+            title={title}
+          />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {title}
@@ -52,6 +58,15 @@ const BasicCard = ({
         ) : (
           ""
         )}
+        {shop
+          ? shop.map(s => (
+              <a href={s.uri} className={classes.noDecoration}>
+                <Button size="small" color="primary">
+                  {s.label}
+                </Button>
+              </a>
+            ))
+          : ""}
       </CardActions>
     </Card>
   ) : (

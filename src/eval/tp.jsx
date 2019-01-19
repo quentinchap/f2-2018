@@ -23,7 +23,7 @@ const TPEval = props => {
                 Le projet est fonctionnel. Privilégiez la qualité aux
                 fonctionnalités - 80%
               </li>
-              <li>Les méthodes et stratégies d'élicitation du besoin - 20%</li>
+              <li>Nombre de fonctionnalités - 20%</li>
             </ul>
             <h3>Maitrise technique</h3>
             <ul>
@@ -40,15 +40,13 @@ const TPEval = props => {
             </ul>
             <h3>Bonus</h3>
             <ul>
-              <li>Les tâches répétitives sont automatisées - 20%</li>
-              <li>Vous êtes prédictif dans votre avancement - 20%</li>
               <li>
-                Vous maitrisez au delà des attentes le développement front - 20%
+                Vous maitrisez au delà des attentes le développement front - 35%
               </li>
               <li>
-                Vous maitrisez au delà des attentes le développement back - 20%
+                Vous maitrisez au delà des attentes le développement back - 35%
               </li>
-              <li>Présence physique et mentale aux TP/TD - 20%</li>
+              <li>Présence physique et mentale aux TP/TD - 30%</li>
             </ul>
           </Typography>
         </Card>
