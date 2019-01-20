@@ -24,6 +24,7 @@ import Auth_Code_Grant from "../assets/img/auth/Auth_Code_Grant.png";
 import Implicit_Grant from "../assets/img/auth/Implicit_Grant.png";
 import ResourceOwnerPasswordCredentialsGrant from "../assets/img/auth/ResourceOwnerPasswordCredentialsGrant.png";
 import ClientCredentialsGrant from "../assets/img/auth/ClientCredentialsGrant.png";
+import openIdFlow from "../assets/img/auth/openIdFlow.png";
 
 const AuthPrez = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
@@ -204,59 +205,93 @@ const AuthPrez = ({ classes }) => (
         OAuth 2.0: Authorization Code Grant
       </Heading>
       <List>
-        <ListItem>Processus pour client pouvant conserver la confidentialité des ID</ListItem>
+        <ListItem>
+          Processus pour client pouvant conserver la confidentialité des ID
+        </ListItem>
         <ListItem>Fournis un Access token ainsi qu'un Refresh Token</ListItem>
-        <ListItem>Principalement pour les applications machine to machine </ListItem>
+        <ListItem>
+          Principalement pour les applications machine to machine{" "}
+        </ListItem>
       </List>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Authorization Code Grant
       </Heading>
-      <img src={Auth_Code_Grant} /> <br/>
-      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">Source</a>
+      <img src={Auth_Code_Grant} /> <br />
+      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
+        Source
+      </a>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Implicit Grant
       </Heading>
       <List>
-        <ListItem>Processus pour client ne pouvant pas conserver la confidentialité des ID</ListItem>
+        <ListItem>
+          Processus pour client ne pouvant pas conserver la confidentialité des
+          ID
+        </ListItem>
         <ListItem>Identification non issue du client</ListItem>
-        <ListItem>Identifiant et URL de redirection permettent l'identification</ListItem>
+        <ListItem>
+          Identifiant et URL de redirection permettent l'identification
+        </ListItem>
       </List>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Implicit Grant
       </Heading>
-      <img src={Implicit_Grant} /> <br/>
-      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">Source</a>
+      <img src={Implicit_Grant} /> <br />
+      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
+        Source
+      </a>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Resource Owner Password Credentials Grant
       </Heading>
-      
+      <List>
+        <ListItem>
+          Nécessite une confiance absolue entre le client et le propriètaire de
+          la ressource
+        </ListItem>
+        <ListItem>
+          Méthode à utiliser quand le client et le serveur sont sous la
+          responsabilité de la même personne
+        </ListItem>
+      </List>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Resource Owner Password Credentials Grant
       </Heading>
-      <img src={ResourceOwnerPasswordCredentialsGrant} /> <br/>
-      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">Source</a>
+      <img src={ResourceOwnerPasswordCredentialsGrant} /> <br />
+      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
+        Source
+      </a>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Client Credentials Grant
       </Heading>
+      <List>
+        <ListItem>
+          Deux acteurs entre en jeu, client et serveur d'autorisation
+        </ListItem>
+        <ListItem>
+          Ne permet généralement pas d'accéder à des ressources privées
+        </ListItem>
+      </List>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Client Credentials Grant
       </Heading>
-      <img src={ClientCredentialsGrant} /> <br/>
-      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">Source</a>
+      <img src={ClientCredentialsGrant} /> <br />
+      <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
+        Source
+      </a>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
@@ -265,11 +300,11 @@ const AuthPrez = ({ classes }) => (
       <p>
         OAuth permet de définir des méthodes et scénarios de déléguation
         d'accés. Cependant la notion d'utilisateur est inexistant et les
-        problèmatiques d'autorisation et d'indentification ne sont pas gérer.
+        problèmatiques d'autorisation et d'indentification ne sont pas gérées.
       </p>
       <p>
         Pour avoir un système complet il est donc nécessaire de faire appel à
-        une surcouche comme par exemple openID Connect
+        une surcouche comme par exemple openID Connect.
       </p>
     </Slide>
     <Slide transition={["fade"]}>
@@ -292,6 +327,61 @@ const AuthPrez = ({ classes }) => (
           <a href="https://meritis.fr/techno-archi/openid-connect/">Meritis</a>
         </Cite>
       </BlockQuote>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        OpenId Connect
+      </Heading>
+      <p>
+        Utilise les grand principes de l'OAuth en standardisant de nouveau
+        processe permettant de:
+      </p>
+      <List>
+        <ListItem>Prendre en charge l'authentification</ListItem>
+        <ListItem>Gérer le SSO (Single Sign On)</ListItem>
+        <ListItem>Récupérer les informations utilisateurs</ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        OpenId Connect
+      </Heading>
+      <p>3 type de Processus d'identification</p>
+      <List>
+        <ListItem>
+          <strong>Authorization Code Flow</strong> le plus courant s'adapte bien
+          aux problèmatiques actuelles. Il propose d'implémenter deux interfaces
+          différentes pour l'authorisation et l'obtention de tokens. Nécessite une inscription de l'utilisateur côté fournisseur OpenID
+        </ListItem>
+        <ListItem>
+          <strong>Implicit Flow</strong> Les tokens sont retourné directement par la même interface et les utilisateurs ne s'enregistre pas côté fournisseur. Cas d'utilisations limités.
+        </ListItem>
+        <ListItem>
+          <strong>Hybrid Flow</strong> Mix entre les deux précédents
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        OpenId Connect: token ID
+      </Heading>
+      <p>Token de type JWT portant des informations sur l'utilisateur.</p>
+      <List>
+        <ListItem>authentification</ListItem>
+        <ListItem>rôles</ListItem>
+        <ListItem>claims (attibuts utilisateur) standards & privés</ListItem>
+      </List>
+      <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">
+        Champs standard
+      </a>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        OpenId Connect: Authorization Code Flow
+      </Heading>
+      <img src={openIdFlow} style={{ maxHeight: "70vh" }} />
+      <br />
+      <a href="https://meritis.fr/techno-archi/openid-connect/">Source</a>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
