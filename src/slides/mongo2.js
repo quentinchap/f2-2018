@@ -3,13 +3,10 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text
 } from "spectacle";
@@ -17,11 +14,6 @@ import theme from "../theme";
 import { withStyles } from "@material-ui/core";
 import hdfs from "../assets/img/mongo/hdfs.png";
 import clusteredIndex from "../assets/img/mongo/clusteredIndex.png";
-import column2 from "../assets/img/mongo/column2.png";
-import cap from "../assets/img/mongo/cap.png";
-import normalization from "../assets/img/mongo/normalization.png";
-import normalization2 from "../assets/img/mongo/normalization2.png";
-import { LiveProvider, LiveEditor } from "react-live";
 
 const MongoPrez2 = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>

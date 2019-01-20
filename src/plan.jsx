@@ -144,9 +144,9 @@ export const coursesBack = [
     active: true,
     title: "Sécurisez vos routes",
     description:
-      "Mettre en place une stratégie adapter au niveau de vos routes express",
+      "Contrôle d'accés à base de token JWT",
     icon: securityIcon,
-    course: "/auth",
+    course: "/auth-back",
     evaluation: ""
   },
   {

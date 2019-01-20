@@ -18,6 +18,7 @@ import MongoPrez from './slides/mongo';
 import MongoPrez2 from './slides/mongo2';
 import testApi from "./slides/testApi";
 import AuthPrez from "./slides/auth";
+import AuthBackPrez from "./slides/auth-back";
 import NpmPrez from "./slides/npm";
 
 ReactDOM.render(
@@ -37,6 +38,7 @@ ReactDOM.render(
       <Route path="/html/" component={HtmlPrez} />
       <Route path="/ux/" component={UxPrez} />
       <Route path="/auth/" component={AuthPrez} />
+      <Route path="/auth-back/" component={AuthBackPrez} />
       <Route path="/base/" component={BasePrez} />
       <Route path="/eval/html/" component={HtmlEval} />
       <Route path="/eval/git/" component={GitEval} />
