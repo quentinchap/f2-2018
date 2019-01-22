@@ -103,7 +103,7 @@ const Home = props => {
 
         <div className={classes.title}>
           <Typography variant="h4" gutterBottom>
-            Bibliographie pour aller plus loin
+            Bibliographie
           </Typography>
         </div>
         {livres.map(c => (

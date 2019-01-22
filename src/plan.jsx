@@ -10,6 +10,7 @@ import npmIcon from "./assets/img/npm/npm.png";
 import apiCover from "./assets/img/apiCover.jpg";
 import nodeJsBook from "./assets/img/books/nodeJs.gif";
 import mongoBook from "./assets/img/books/mongo.gif";
+import reactBook from "./assets/img/books/react.gif";
 
 export const coursesTools = [
   {
@@ -107,11 +108,10 @@ export const coursesFront = [
   },
   {
     active: true,
-    title: "Se connecter à une api sécuriser",
-    description:
-      "Comment consommer des Apis sécuriser via votre client react.",
+    title: "Se connecter à une api sécurisée",
+    description: "Comment consommer des Apis sécurisées via votre client react.",
     icon: securityIcon,
-    course: "/auth",
+    course: "/auth-front",
     evaluation: ""
   }
 ];
@@ -143,8 +143,7 @@ export const coursesBack = [
   {
     active: true,
     title: "Sécurisez vos routes",
-    description:
-      "Contrôle d'accés à base de token JWT",
+    description: "Contrôle d'accés à base de token JWT",
     icon: securityIcon,
     course: "/auth-back",
     evaluation: ""
@@ -171,6 +170,11 @@ export const livres = [
       {
         label: "o'reilly",
         uri: "http://shop.oreilly.com/product/0636920046936.do"
+      },
+      {
+        label: "ebook (édition 1)",
+        uri:
+          "https://pepa.holla.cz/wp-content/uploads/2016/12/Learning-Node.pdf"
       }
     ],
     evaluation: ""
@@ -191,6 +195,26 @@ export const livres = [
         label: "ebook (édition 2)",
         uri:
           "http://usuaris.tinet.cat/bertolin/pdfs/mongodb_%20the%20definitive%20guide%20-%20kristina%20chodorow_1401.pdf"
+      }
+    ],
+    evaluation: ""
+  },
+  {
+    active: true,
+    title: "MongoDB: The Definitive Guide, 3rd Edition",
+    description: "O'Reilly",
+    contain: true,
+    icon: reactBook,
+    shop: [
+      { label: "Amazon", uri: "https://amzn.to/2T3MlZd" },
+      {
+        label: "o'reilly",
+        uri: "http://shop.oreilly.com/product/0636920049579.do"
+      },
+      {
+        label: "ebook (édition 1)",
+        uri:
+          "http://www.r-5.org/files/books/computers/languages/escss/w-tkt/react/Alex_Banks_and_Eve_Porcello-Learning_React-EN.pdf"
       }
     ],
     evaluation: ""

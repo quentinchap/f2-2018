@@ -2,94 +2,147 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import { Deck, Heading, ListItem, List, Slide, Text } from "spectacle";
+import { Deck, Heading, Slide } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
-import sessionAuth from "../assets/img/auth/sessionAuth.png";
+import { LiveProvider } from "react-live";
+import { LiveEditor } from "react-live";
 
-const AuthPrez = ({ classes }) => (
+const loginFunction = `
+login = async (email, password) => {
+  console.log(email, password);
+  try {
+    let res = await axios.post("http://localhost:5000/api/v1/login", {
+      email,
+      password
+    });
+    localStorage.setItem("token", res.data.token);
+    console.log(res);
+  } catch (err) {
+    console.error(err);
+  }
+};
+`;
+
+const middleWare = `
+const allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+
+  //intercepts OPTIONS method
+  if ('OPTIONS' === req.method) {
+    //respond with 200
+    res.status(200).json({ message: "ok" });
+  }
+  else {
+  //move on
+    next();
+  }
+};
+
+export default allowCrossDomain;`;
+
+const getPosts = `
+getPosts = async () => {
+  try {
+    const access_token = localStorage.getItem("token");
+    const options = {
+      method: "get",
+      headers: {
+        Authorization: access_token,
+        "Content-Type": "application/json"
+      },
+      url: "http://localhost:5000/api/v1/posts"
+    };
+    let res = await axios(options);
+    this.setState({ posts: res.data.posts });
+  } catch (err) {
+    alert("erreur");
+  }
+};`;
+
+const loginForm = `
+const LoginForm = ({ login, mdp, onLogin, handleChange }) => (
+  <form
+    onSubmit={() => onLogin(login, mdp)}
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      maxWidth: "80vw",
+      margin: "auto",
+      marginTop: "20px"
+    }}
+  >
+    <input
+      type="text"
+      placeholder="login"
+      value={login}
+      onChange={handleChange("login")}
+    />
+    <input
+      type="password"
+      placeholder="password"
+      value={mdp}
+      onChange={handleChange("mdp")}
+    />
+    <button type="submit">Login</button>
+  </form>
+);`;
+
+const AuthFrontPrez = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-        Techniques d'authentification
-      </Heading>
-      <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-        Contrôler l'accés de vos APIs
-      </Text>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-        Pourquoi ?
+        Utilisez des APIs sécurisées
       </Heading>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Session
+        middleWare
       </Heading>
-      <img src={sessionAuth} />
+      <LiveProvider code={middleWare}>
+        <LiveEditor />
+      </LiveProvider>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Session
+        Formulaire de login
       </Heading>
-      <List>
-        <ListItem>Simple à implémenter</ListItem>
-        <ListItem>Utilise la session (cookie server-side)</ListItem>
-        <ListItem>Statefull => difficilement scalable</ListItem>
-        <ListItem>Vol de session</ListItem>
-      </List>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Basic Auth
-      </Heading>
-      <p>Ajout d'un header</p>
-      <p>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</p>
-    </Slide>
-    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-      <Heading size={6} textColor="primary" caps>
-        Basic Auth
-      </Heading>
-      <List>
-        <ListItem>Simple à implémenter</ListItem>
-        <ListItem>Vol de token</ListItem>
-        <ListItem>Passage du mot de passe et du login à chaque requête</ListItem>
-      </List>
+      <LiveProvider code={loginForm}>
+        <LiveEditor />
+      </LiveProvider>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        API Keys
+        Fonction de login
       </Heading>
-      <p>Comme basic mais en passant par un token qui sera généré et fournis à l'utilisateur</p>
+      <LiveProvider code={loginFunction}>
+        <LiveEditor />
+      </LiveProvider>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        OAuth
+        Liste de posts
       </Heading>
+      <LiveProvider
+        code={`<button onClick={this.getPosts}>Get posts</button>
+        {this.state.posts.map(p => (
+          <div>{p.title}</div>
+        ))}`}
+      >
+        <LiveEditor />
+      </LiveProvider>
     </Slide>
-    <Slide transition={["fade"]} bgColor="primary">
+    <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Ressources
+        Utiliser une route sécurisée
       </Heading>
-      <List>
-        <ListItem>
-          <a href="https://nordicapis.com/3-common-methods-api-authentication-explained/">
-            3 Common Methods of API Authentication
-          </a>
-        </ListItem>
-        <ListItem>
-          <a href="https://medium.com/@sherryhsu/session-vs-token-based-authentication-11a6c5ac45e4">
-            Session vs Token Based Authentication
-          </a>
-        </ListItem>
-        <ListItem>
-          <a href="https://medium.freecodecamp.org/learn-how-to-handle-authentication-with-node-using-passport-js-4a56ed18e81e">
-            Passport
-          </a>
-        </ListItem>
-      </List>
+      <LiveProvider code={getPosts}>
+        <LiveEditor />
+      </LiveProvider>
     </Slide>
   </Deck>
 );
 
-export default withStyles(theme.matUI)(AuthPrez);
+export default withStyles(theme.matUI)(AuthFrontPrez);
