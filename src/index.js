@@ -17,6 +17,7 @@ import RestFullPrez from './slides/RestFull';
 import MongoPrez from './slides/mongo';
 import MongoPrez2 from './slides/mongo2';
 import testApi from "./slides/testApi";
+import TestPrez from "./slides/test";
 import AuthPrez from "./slides/auth";
 import AuthBackPrez from "./slides/auth-back";
 import AuthFrontPrez from "./slides/auth-front";
@@ -38,6 +39,7 @@ ReactDOM.render(
       <Route path="/apiRest/" component={RestFullPrez} />
       <Route path="/html/" component={HtmlPrez} />
       <Route path="/ux/" component={UxPrez} />
+      <Route path="/tests/" component={TestPrez} />
       <Route path="/auth/" component={AuthPrez} />
       <Route path="/auth-back/" component={AuthBackPrez} />
       <Route path="/auth-front/" component={AuthFrontPrez} />

@@ -73,11 +73,11 @@ export const coursesTools = [
     evaluation: ""
   },
   {
-    active: false,
-    title: "La théorie des tests",
-    description: "Un bon test passe par une bonne stratégie de test",
+    active: true,
+    title: "Startégies et méthodes de tests",
+    description: "Tester c'est douter, vraiment?",
     icon: testIcon,
-    course: "/ux"
+    course: "/tests"
     // evaluation: "/eval/git"
   }
 ];
