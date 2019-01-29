@@ -113,6 +113,14 @@ export const coursesFront = [
     icon: securityIcon,
     course: "/auth-front",
     evaluation: ""
+  },
+  {
+    active: true,
+    title: "Tests ReactJS",
+    description: "Mettre en place des tests React",
+    icon: testIcon,
+    course: "/tests-react"
+    // evaluation: "/eval/git"
   }
 ];
 export const coursesBack = [
@@ -147,6 +155,14 @@ export const coursesBack = [
     icon: securityIcon,
     course: "/auth-back",
     evaluation: ""
+  },
+  {
+    active: false,
+    title: "Tests NodeJs",
+    description: "Mettre en place des tests NodeJS",
+    icon: testIcon,
+    course: "/tests-node"
+    // evaluation: "/eval/git"
   },
   {
     active: false,

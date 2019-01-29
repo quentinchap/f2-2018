@@ -18,6 +18,8 @@ import MongoPrez from './slides/mongo';
 import MongoPrez2 from './slides/mongo2';
 import testApi from "./slides/testApi";
 import TestPrez from "./slides/test";
+import TestNodePrez from "./slides/test.node";
+import TestReactPrez from "./slides/test.react";
 import AuthPrez from "./slides/auth";
 import AuthBackPrez from "./slides/auth-back";
 import AuthFrontPrez from "./slides/auth-front";
@@ -40,6 +42,8 @@ ReactDOM.render(
       <Route path="/html/" component={HtmlPrez} />
       <Route path="/ux/" component={UxPrez} />
       <Route path="/tests/" component={TestPrez} />
+      <Route path="/tests-node/" component={TestNodePrez} />
+      <Route path="/tests-react/" component={TestReactPrez} />
       <Route path="/auth/" component={AuthPrez} />
       <Route path="/auth-back/" component={AuthBackPrez} />
       <Route path="/auth-front/" component={AuthFrontPrez} />
