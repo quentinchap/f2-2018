@@ -17,7 +17,7 @@ export const coursesTools = [
   {
     active: true,
     title: "Les bases du web",
-    description: "Les concept de bases à maitriser",
+    description: "Les concepts de bases à maitriser",
     icon: webIcon,
     course: "/base",
     evaluation: ""
