@@ -24,6 +24,7 @@ import AuthPrez from "./slides/auth";
 import AuthBackPrez from "./slides/auth-back";
 import AuthFrontPrez from "./slides/auth-front";
 import NpmPrez from "./slides/npm";
+import CiCdPrez from "./slides/cicd";
 
 ReactDOM.render(
   <Router basename='/f2-2018/'>
@@ -32,6 +33,7 @@ ReactDOM.render(
       <Route path="/f2-2018/" exact component={Home} />
       <Route path="/git/" component={GitPrez} />
       <Route path="/npm/" component={NpmPrez} />
+      <Route path="/ci-cd/" component={CiCdPrez} />
       <Route path="/react1/" component={React1Prez} />
       <Route path="/react-async/" component={React2Prez} />
       <Route path="/test-api/" component={testApi} />

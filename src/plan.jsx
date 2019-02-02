@@ -11,6 +11,7 @@ import apiCover from "./assets/img/apiCover.jpg";
 import nodeJsBook from "./assets/img/books/nodeJs.gif";
 import mongoBook from "./assets/img/books/mongo.gif";
 import reactBook from "./assets/img/books/react.gif";
+import ciCdCover from "./assets/img/cicd/cardHeader.jpeg";
 
 export const coursesTools = [
   {
@@ -78,6 +79,13 @@ export const coursesTools = [
     description: "Tester c'est douter, vraiment?",
     icon: testIcon,
     course: "/tests"
+  },
+  {
+    active: false,
+    title: "CI / CDE / CD",
+    description: "Gardez la maîtrise de vos apps",
+    icon: ciCdCover,
+    course: "/ci-cd"
     // evaluation: "/eval/git"
   }
 ];
