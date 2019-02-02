@@ -8,17 +8,10 @@ import {
   Cite,
   Deck,
   Heading,
-  ListItem,
-  List,
   Quote,
   Slide,
   Text
 } from "spectacle";
-import htmlExtract from "../assets/img/html.png";
-import htmlPdfExtract from "../assets/pdf/html.pdf";
-import videoHtml from "../assets/img/mediaHtml.png";
-import formHtml from "../assets/img/formHtml.png";
-import tabHtml from "../assets/img/tabHtml.png";
 import httpSchema from "../assets/img/http-schema.gif";
 import webSchema1 from "../assets/img/webSchema1.png";
 import { withStyles } from "@material-ui/core";

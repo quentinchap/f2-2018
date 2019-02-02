@@ -70,14 +70,14 @@ const MongoPrez2 = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         HDFS
       </Heading>
-      <img src={hdfs} />
+      <img src={hdfs} alt="mongo"/>
       <p>Spark, HBase, ect.</p>
     </Slide>
     <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Clustered index
       </Heading>
-      <img src={clusteredIndex} />
+      <img src={clusteredIndex} alt="mongo"/>
       <p>Mongo DB, ect.</p>
     </Slide>
     <Slide transition={["fade"]}>

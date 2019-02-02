@@ -93,7 +93,7 @@ const HtmlPrez = ({ classes }) => (
       <Heading size={6} textColor="primary" caps>
         Les balises de média
       </Heading>
-      <img src={videoHtml} />
+      <img src={videoHtml} alt="test"/>
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
@@ -110,13 +110,13 @@ const HtmlPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         Les tableaux
       </Heading>
-      <img src={tabHtml} />
+      <img src={tabHtml} alt="test"/>
     </Slide>
     <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Les formulaires
       </Heading>
-      <img src={formHtml} />
+      <img src={formHtml} alt="test"/>
     </Slide>
 
     <Slide transition={["zoom"]} bgColor="primary">

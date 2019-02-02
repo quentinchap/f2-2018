@@ -5,40 +5,8 @@ import React from "react";
 import { Deck, Heading, ListItem, List, Slide, Text } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
-import sessionAuth from "../assets/img/auth/sessionAuth.png";
 import { LiveProvider } from "react-live";
 import { LiveEditor } from "react-live";
-
-const structure = `
-+-- package.json
-+-- app.js
-+-- routes.js
-+-- middlewares
-|   +-- myLogger.js
-|   +-- auth.js
-+-- libs
-|   +-- auth.js
-+-- Post
-|   +-- ...
-+-- User
-|   +-- ...
-`;
-
-const verifyToken = `
-import jwt from "jsonwebtoken";
-
-export async function verifyJWTToken(token) {
-  try {
-    const decodedToken = await jwt.verify(token, process.env.JWT_SECRET);
-
-    if (!decodedToken) {
-      throw new err();
-    }
-    return decodedToken;
-  } catch (err) {
-    throw new err();
-  }
-}`;
 
 const createToken = `
 import _ from "lodash";

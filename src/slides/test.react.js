@@ -59,7 +59,6 @@ it('Verify Buttons', () => {
 });
 `;
 
-const apiLogin = ``;
 
 const TestReactPrez = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
@@ -180,7 +179,7 @@ npm i jest enzyme enzyme-adapter-react-16 enzyme-to-json babel-jest --save-dev
       <LiveProvider code={`npx jest --coverage`}>
         <LiveEditor />
       </LiveProvider>
-      <img src={coverage} />
+      <img src={coverage} alt="react"/>
     </Slide>
   </Deck>
 );

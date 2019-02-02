@@ -14,7 +14,6 @@ import {
   Cite
 } from "spectacle";
 import theme from "../theme";
-import tdd from "../assets/img/test/tdd.png";
 import cicdecd from "../assets/img/cicd/cicdecd.png";
 import { withStyles } from "@material-ui/core";
 
@@ -33,7 +32,7 @@ const CiCdPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         CI vs CDE vs CD
       </Heading>
-      <img src={cicdecd} style={{ maxWidth: "900px" }} />
+      <img src={cicdecd} style={{ maxWidth: "900px" }} alt="cicd" />
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
@@ -74,6 +73,7 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide>
       <iframe
+        title="cicd"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/_zCyLT33moA"

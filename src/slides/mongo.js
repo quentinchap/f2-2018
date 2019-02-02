@@ -22,7 +22,7 @@ import normalization from "../assets/img/mongo/normalization.png";
 import hdfs from "../assets/img/mongo/hdfs.png";
 import clusteredIndex from "../assets/img/mongo/clusteredIndex.png";
 import normalization2 from "../assets/img/mongo/normalization2.png";
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import { LiveProvider, LiveEditor} from "react-live";
 
 let conf = `
 import mongoose from "mongoose";
@@ -278,9 +278,9 @@ const MongoPrez = ({ classes }) => (
       <Heading size={6} textColor="primary" caps>
         Colonnes
       </Heading>
-      <img src={column1} />
+      <img src={column1} alt="mongo" />
       <br />
-      <img src={column2} />
+      <img src={column2} alt="mongo" />
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
@@ -377,7 +377,7 @@ const MongoPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         Thèorême de CAP
       </Heading>
-      <img src={cap} />
+      <img src={cap} alt="mongo"  />
       <p>2000, Eric A. Brewer</p>
     </Slide>
     <Slide transition={["fade"]}>
@@ -445,13 +445,13 @@ const MongoPrez = ({ classes }) => (
       <Heading size={6} textColor="primary" caps>
         Dénormalisation
       </Heading>
-      <img src={normalization} />
+      <img src={normalization} alt="mongo" />
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Dénormalisation
       </Heading>
-      <img src={normalization2} />
+      <img src={normalization2} alt="mongo" />
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
@@ -620,14 +620,14 @@ const MongoPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         HDFS
       </Heading>
-      <img src={hdfs} />
+      <img src={hdfs} alt="mongo" />
       <p>Spark, HBase, ect.</p>
     </Slide>
     <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Clustered index
       </Heading>
-      <img src={clusteredIndex} />
+      <img src={clusteredIndex} alt="mongo" />
       <p>Mongo DB, ect.</p>
       <p>replica set</p>
     </Slide>
