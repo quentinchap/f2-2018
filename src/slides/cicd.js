@@ -16,6 +16,8 @@ import {
 import theme from "../theme";
 import cicdecd from "../assets/img/cicd/cicdecd.png";
 import { withStyles } from "@material-ui/core";
+import { LiveProvider } from "react-live";
+import { LiveEditor } from "react-live";
 
 const CiCdPrez = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
@@ -63,6 +65,12 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
+        CI: Continuous integration
+      </Heading>
+      Récupération du code -> Build -> Test -> Déploiement env de test
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
         CI: Pourquoi ?
       </Heading>
       <List>
@@ -84,7 +92,68 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        CI : Les solutions
+        CDE: Continuous delivery
+      </Heading>
+      <BlockQuote>
+        <Quote>
+          La livraison continue est une approche d’ingénierie logicielle dans
+          laquelle les équipes produisent des logiciels dans des cycles courts,
+          ce qui permet de le mettre à disposition à n’importe quel moment. Le
+          but est de construire, tester et diffuser un logiciel plus rapidement.
+        </Quote>
+        <Cite>Wikipedia</Cite>
+      </BlockQuote>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        CDE: Continuous delivery
+      </Heading>
+      Etapes CI -> tests d'intégration -> Passe la main
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        CDE: Pourquoi ?
+      </Heading>
+      <List>
+        <ListItem>Amélioration des processus inter équipes</ListItem>
+        <ListItem>Preuve de qualité de la solution à déployer</ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        CD: Continuous deployement
+      </Heading>
+      <BlockQuote>
+        <Quote>
+          Approche utilisé par beaucoup de géant du web qui consiste à
+          automatiser toutes la chaîne jusqu'à la livraison en production
+          à chaque dépôt ou pull request sur le repo git.
+        </Quote>
+      </BlockQuote>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        CDE: Pourquoi ?
+      </Heading>
+      <List>
+        <ListItem>Time to market</ListItem>
+        <ListItem>Rencontrer les problèmatiques terrains plus vite</ListItem>
+        <ListItem>Apprendre plus vite, mieux s'adapter</ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Pré-requis
+      </Heading>
+      <List>
+        <ListItem>Tests solides</ListItem>
+        <ListItem>Capacité de rollback</ListItem>
+        <ListItem>Possibilité de faire du deploy partiel</ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Les solutions
       </Heading>
       <List>
         <ListItem>Travis CI</ListItem>
@@ -100,9 +169,19 @@ const CiCdPrez = ({ classes }) => (
       <List>
         <ListItem>Inscription</ListItem>
         <ListItem>créez un fichier .travis.yml</ListItem>
-        <ListItem>Jenkins</ListItem>
-        <ListItem>GitLab CI</ListItem>
       </List>
+      <LiveProvider
+        code={`
+      language: node_js
+      node_js: 
+        - "stable"
+      cache:
+        directories:
+          - "node_modules"
+      `}
+      >
+        <LiveEditor />
+      </LiveProvider>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>

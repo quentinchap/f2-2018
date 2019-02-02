@@ -81,7 +81,7 @@ export const coursesTools = [
     course: "/tests"
   },
   {
-    active: false,
+    active: true,
     title: "CI / CDE / CD",
     description: "Gardez la maîtrise de vos apps",
     icon: ciCdCover,
