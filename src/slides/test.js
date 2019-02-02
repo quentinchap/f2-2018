@@ -9,9 +9,6 @@ import {
   List,
   Slide,
   Text,
-  Quote,
-  BlockQuote,
-  Cite
 } from "spectacle";
 import theme from "../theme";
 import tdd from "../assets/img/test/tdd.png";
@@ -81,7 +78,7 @@ const TestPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         TDD
       </Heading>
-      <img src={tdd} style={{ maxWidth: "70VW" }} />
+      <img src={tdd} style={{ maxWidth: "70VW" }} alt="test"/>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>

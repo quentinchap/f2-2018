@@ -6,6 +6,7 @@ const styles = (colors, fonts) => ({
   print: print(),
   matUI: {
     root: {
+      flexGrow: 1,
       "@global a": {
         textDecoration: "none!important"
       }
@@ -49,9 +50,6 @@ const styles = (colors, fonts) => ({
     mediaContain: {
       height: 200,
       backgroundSize: "contain"
-    },
-    root: {
-      flexGrow: 1
     },
     icon: {
       color: "white"

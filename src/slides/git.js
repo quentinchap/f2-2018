@@ -61,7 +61,7 @@ export default class GitPrez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Décentralisé
           </Heading>
-          <img src={gitProcess} />
+          <img src={gitProcess} alt="git" />
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
@@ -78,7 +78,7 @@ export default class GitPrez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Les branches
           </Heading>
-          <img src={gitBranch} />
+          <img src={gitBranch} alt="git" />
           <List>
             <ListItem>
               <a href="https://medium.freecodecamp.org/git-rebase-and-the-golden-rule-explained-70715eccc372">
@@ -116,7 +116,7 @@ export default class GitPrez extends React.Component {
           <Heading size={6} textColor="tertiary" caps>
             Bonus: GitFlow
           </Heading>
-          <img src={gitFlow} />
+          <img src={gitFlow} alt="git" />
         </Slide>
       </Deck>
     );

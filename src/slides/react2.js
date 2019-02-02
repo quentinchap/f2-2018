@@ -308,7 +308,7 @@ const res = await API.delete('/users/\${this.state.id}');
       <Heading size={6} textColor="tertiary" caps>
         CORS - Cross-origin resource sharing
       </Heading>
-      <img src={simple_req} />
+      <img src={simple_req} alt="react" />
     </Slide>
   </Deck>
 );

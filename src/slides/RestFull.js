@@ -4,7 +4,6 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
@@ -86,13 +85,13 @@ export default class RestFullPrez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Les requêtes
           </Heading>
-          <img src={apiStruct} />
+          <img src={apiStruct} alt="api"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Les réponses
           </Heading>
-          <img src={apiStruct2} />
+          <img src={apiStruct2} alt="api"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="tertiary" caps>
@@ -121,7 +120,7 @@ export default class RestFullPrez extends React.Component {
             <Quote>/getAllCars : ko </Quote>
           </BlockQuote>
           <br />
-          <img src={apiRestful} />
+          <img src={apiRestful} alt="api"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
@@ -140,7 +139,7 @@ export default class RestFullPrez extends React.Component {
             Restful - HATEOAS
           </Heading>
           <p>Hypermedia as the Engine of Application State</p>
-          <img src={apiResful2} />
+          <img src={apiResful2} alt="api"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>

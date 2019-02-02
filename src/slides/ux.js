@@ -2,22 +2,9 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import {
-  BlockQuote,
-  Cite,
-  Deck,
-  Heading,
-  ListItem,
-  List,
-  Quote,
-  Slide,
-  Text
-} from "spectacle";
+import { Deck, Heading, ListItem, List, Slide, Text } from "spectacle";
 import theme from "../theme";
 import BetS from "../assets/pdf/bets.pdf";
-import gitProcess from "../assets/img/git-process.png";
-import gitBranch from "../assets/img/git-branch.png";
-import gitFlow from "../assets/img/gitflow.png";
 
 export default class UxPrez extends React.Component {
   render() {
@@ -151,8 +138,8 @@ export default class UxPrez extends React.Component {
             <ListItem>Equilibre entre simplicité et autosuffisance</ListItem>
           </List>
           <p>
-            Un manque d'affrodance peut-être normal dans des applications métiers
-            compliquées
+            Un manque d'affrodance peut-être normal dans des applications
+            métiers compliquées
           </p>
         </Slide>
 
@@ -297,6 +284,7 @@ export default class UxPrez extends React.Component {
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <iframe
+            title="ux"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/LVLoc6FrLi0"

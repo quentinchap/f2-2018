@@ -3,13 +3,10 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text
 } from "spectacle";
@@ -83,7 +80,7 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Structure d'un front react
           </Heading>
-          <img src={react1} />
+          <img src={react1} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
@@ -124,13 +121,13 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Architecture
           </Heading>
-          <img src={react1Archi} />
+          <img src={react1Archi} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             package.json
           </Heading>
-          <img src={react1Package} />
+          <img src={react1Package} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="tertiary" caps>
@@ -194,34 +191,34 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Js moderne (ES2018) - Les variables
           </Heading>
-          <img src={react1Var} />
+          <img src={react1Var} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Js moderne (ES2018) - Class
           </Heading>
-          <img src={react1Class} />
+          <img src={react1Class} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Js moderne (ES2018) - Arrow function
           </Heading>
-          <img src={react1ArrowFunction} />
+          <img src={react1ArrowFunction} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Js moderne (ES2018) - Spread operator
           </Heading>
-          <img src={react1Spread} />
+          <img src={react1Spread} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Js moderne (ES2018) - Module, import & export
           </Heading>
-          <img src={react1Export} />
+          <img src={react1Export} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
@@ -237,14 +234,14 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             React - Premier composant
           </Heading>
-          <img src={react1FirstComponent} />
+          <img src={react1FirstComponent} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React
           </Heading>
-          <img src={react1Archi2} />
+          <img src={react1Archi2} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -253,7 +250,7 @@ export default class React1Prez extends React.Component {
           </Heading>
           <p>Chaque composant posséde un état (state) qui lui est propre</p>
           <br />
-          <img src={react1State} />
+          <img src={react1State} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -271,7 +268,7 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             React - Life cycle
           </Heading>
-          <img src={react1lifCycle} />
+          <img src={react1lifCycle} alt="react"/>
           <br />
           <a href="https://levelup.gitconnected.com/react-cheatsheet-this-setstate-8bc12c5f40f5">
             React Cheatsheet 
@@ -292,7 +289,7 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             React - Props
           </Heading>
-          <img src={react1Prop} />
+          <img src={react1Prop} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -303,7 +300,7 @@ export default class React1Prez extends React.Component {
             Sans prendre de précaution en passant des fonctions en paramètre le
             "this" en vigueur à l'appel disparaît.
           </p>
-          <img src={react1DefThis} />
+          <img src={react1DefThis} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -311,21 +308,21 @@ export default class React1Prez extends React.Component {
             React - React router
           </Heading>
           <p>npm install react-router-dom</p>
-          <img src={react1Router} />
+          <img src={react1Router} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React - Les formulaires
           </Heading>
-          <img src={react1Form} />
+          <img src={react1Form} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React - Les formulaires
           </Heading>
-          <img src={react1Form2} />
+          <img src={react1Form2} alt="react"/>
           <br />
           <p style={{ fontSize: "0.7em" }}>
             &lt;PhoneInput name="Mobile" required={"{true}"} />
@@ -346,7 +343,7 @@ export default class React1Prez extends React.Component {
             <ListItem>Monothread</ListItem>
             <ListItem>Ne pas bloquer l'interface utilisateur</ListItem>
           </List>
-          <img src={archiJs} />
+          <img src={archiJs} alt="react"/>
           <br />
           <a
             style={{ fontSize: "0.5em" }}
@@ -360,7 +357,7 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Fetch
           </Heading>
-          <img src={react1Fetch} />
+          <img src={react1Fetch} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -376,7 +373,7 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Prop Drilling - Context
           </Heading>
-          <img src={react1PropDrilling} />
+          <img src={react1PropDrilling} alt="react"/>
           <br />
           <a
             style={{ fontSize: "0.5em" }}
@@ -389,20 +386,20 @@ export default class React1Prez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Prop Drilling - Context
           </Heading>
-          <img src={react1Provider} />
+          <img src={react1Provider} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Prop Drilling - Context
           </Heading>
-          <img src={react1Consumer} />
+          <img src={react1Consumer} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             React - JSS
           </Heading>
-          <img src={react1Jss} />
+          <img src={react1Jss} alt="react"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -432,7 +429,7 @@ export default class React1Prez extends React.Component {
             <ListItem>lib utilisée Jest</ListItem>
             <ListItem>Doc react: <a href="https://jestjs.io/docs/en/tutorial-react">ici</a></ListItem>
           </List>
-          <img src={react1jest}/>
+          <img src={react1jest} alt="react"/>
         </Slide>
       </Deck>
     );

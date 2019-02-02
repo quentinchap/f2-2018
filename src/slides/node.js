@@ -4,7 +4,6 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
@@ -25,7 +24,6 @@ import nodeGetPost from "../assets/img/nodeGetPost.png";
 import nodeMiddleware from "../assets/img/nodeMiddleware.png";
 import apiProjectStruct from "../assets/img/apiProjectStruct.png";
 import nodeStruct2 from "../assets/img/nodeStruct2.png";
-import nodeUploadFile from "../assets/img/nodeUploadFile.png";
 
 export default class NodePrez extends React.Component {
   render() {
@@ -67,7 +65,7 @@ export default class NodePrez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Une approche différente
           </Heading>
-          <img src={nodeHttp1} />
+          <img src={nodeHttp1} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
@@ -85,13 +83,13 @@ export default class NodePrez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             votre première application
           </Heading>
-          <img src={nodeInit1} />
+          <img src={nodeInit1} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             votre première application
           </Heading>
-          <img src={nodeInit2} />
+          <img src={nodeInit2} alt="react"/>
           <p>
             Création d'un .gitignore{" "}
             <a href="https://github.com/github/gitignore/blob/master/Node.gitignore">
@@ -103,31 +101,31 @@ export default class NodePrez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Données factices
           </Heading>
-          <img src={nodeDummyBdd} />
+          <img src={nodeDummyBdd} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Auto reload
           </Heading>
-          <img src={nodeAutoReload} />
+          <img src={nodeAutoReload} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Première route GET
           </Heading>
-          <img src={nodeFirstRoute} />
+          <img src={nodeFirstRoute} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Première route POST
           </Heading>
-          <img src={nodeFirstPost} />
+          <img src={nodeFirstPost} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Utilisation de paramètres
           </Heading>
-          <img src={nodeGetPost} />
+          <img src={nodeGetPost} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
@@ -162,14 +160,14 @@ export default class NodePrez extends React.Component {
           <Heading size={6} textColor="primary" caps>
             Votre premier middleware
           </Heading>
-          <img src={nodeMiddleware} />
+          <img src={nodeMiddleware} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Organisation projet
           </Heading>
-          <img src={apiProjectStruct} />
-          <img src={nodeStruct2} />
+          <img src={apiProjectStruct} alt="react"/>
+          <img src={nodeStruct2} alt="react"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>

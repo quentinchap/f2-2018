@@ -5,7 +5,6 @@ import React from "react";
 import { Deck, Heading, ListItem, List, Slide, Text } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
-import sessionAuth from "../assets/img/auth/sessionAuth.png";
 import { LiveProvider } from "react-live";
 import { LiveEditor } from "react-live";
 

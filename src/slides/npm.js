@@ -15,8 +15,7 @@ import {
 } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
-import npm from "../assets/img/npm/npm.png";
-import { LiveProvider, LiveEditor, LivePreview } from "react-live";
+import { LiveProvider, LiveEditor } from "react-live";
 
 
 const packagejson = `
@@ -27,7 +26,7 @@ const packagejson = `
   "main": "app.js",
   "scripts": {
     "start": "node_modules/.bin/nodemon app.js --exec babel-node --",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 'Error: no test specified' && exit 1"
   },
   "author": "",
   "license": "ISC",

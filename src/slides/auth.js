@@ -66,7 +66,7 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         Session
       </Heading>
-      <img src={sessionAuth} />
+      <img src={sessionAuth} alt="auth" />
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
@@ -117,20 +117,20 @@ const AuthPrez = ({ classes }) => (
         JWT: Json Web Token
       </Heading>
       <p>Un token autosuffisant</p>
-      <img src={jwt} />
+      <img src={jwt} alt="auth" />
       <p>Authorization: Bearer "token"</p>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         JWT: Header & paylod
       </Heading>
-      <img src={jwtHeaderPayload} />
+      <img src={jwtHeaderPayload} alt="auth" />
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
         JWT: Signature
       </Heading>
-      <img src={jwtSignature} />
+      <img src={jwtSignature} alt="auth" />
       <p>Authorization: Bearer B64(header).B64(payload).sign</p>
     </Slide>
     <Slide transition={["fade"]}>
@@ -218,7 +218,7 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Authorization Code Grant
       </Heading>
-      <img src={Auth_Code_Grant} /> <br />
+      <img src={Auth_Code_Grant} alt="auth" /> <br />
       <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
         Source
       </a>
@@ -242,7 +242,7 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Implicit Grant
       </Heading>
-      <img src={Implicit_Grant} /> <br />
+      <img src={Implicit_Grant} alt="auth" /> <br />
       <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
         Source
       </a>
@@ -266,7 +266,7 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Resource Owner Password Credentials Grant
       </Heading>
-      <img src={ResourceOwnerPasswordCredentialsGrant} /> <br />
+      <img src={ResourceOwnerPasswordCredentialsGrant} alt="auth" /> <br />
       <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
         Source
       </a>
@@ -288,7 +288,7 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         OAuth 2.0: Client Credentials Grant
       </Heading>
-      <img src={ClientCredentialsGrant} /> <br />
+      <img src={ClientCredentialsGrant} alt="auth" /> <br />
       <a href="https://zestedesavoir.com/articles/1616/comprendre-oauth-2-0-par-lexemple/">
         Source
       </a>
@@ -351,10 +351,13 @@ const AuthPrez = ({ classes }) => (
         <ListItem>
           <strong>Authorization Code Flow</strong> le plus courant s'adapte bien
           aux problèmatiques actuelles. Il propose d'implémenter deux interfaces
-          différentes pour l'authorisation et l'obtention de tokens. Nécessite une inscription de l'utilisateur côté fournisseur OpenID
+          différentes pour l'authorisation et l'obtention de tokens. Nécessite
+          une inscription de l'utilisateur côté fournisseur OpenID
         </ListItem>
         <ListItem>
-          <strong>Implicit Flow</strong> Les tokens sont retourné directement par la même interface et les utilisateurs ne s'enregistre pas côté fournisseur. Cas d'utilisations limités.
+          <strong>Implicit Flow</strong> Les tokens sont retourné directement
+          par la même interface et les utilisateurs ne s'enregistre pas côté
+          fournisseur. Cas d'utilisations limités.
         </ListItem>
         <ListItem>
           <strong>Hybrid Flow</strong> Mix entre les deux précédents
@@ -379,7 +382,7 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         OpenId Connect: Authorization Code Flow
       </Heading>
-      <img src={openIdFlow} style={{ maxHeight: "70vh" }} />
+      <img src={openIdFlow} style={{ maxHeight: "70vh" }} alt="auth" />
       <br />
       <a href="https://meritis.fr/techno-archi/openid-connect/">Source</a>
     </Slide>
@@ -387,7 +390,7 @@ const AuthPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         Cas pratique
       </Heading>
-      <img src={OAuth2_algorithm} />
+      <img src={OAuth2_algorithm} alt="auth" />
       <br />
       <a href="https://dba-presents.com/index.php/other/my-thoughts/125-what-is-openid-oauth2-and-google-sign-in">
         Source
@@ -398,6 +401,7 @@ const AuthPrez = ({ classes }) => (
         OAuth 2.0: Les tokens
       </Heading>
       <iframe
+        title="auth"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/BNEoKexlmA4"
