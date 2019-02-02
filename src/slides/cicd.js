@@ -79,6 +79,15 @@ const CiCdPrez = ({ classes }) => (
         <ListItem>Automatiser des actions</ListItem>
       </List>
     </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+       CDE: Pré-requis
+      </Heading>
+      <List>
+        <ListItem>Tests unitaires robustes</ListItem>
+        <ListItem>Equipe organisé et formé à ces pratiques</ListItem>
+      </List>
+    </Slide>
     <Slide>
       <iframe
         title="cicd"
@@ -121,6 +130,15 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
+       CDE: Pré-requis
+      </Heading>
+      <List>
+        <ListItem>Tests d'intégration évolué</ListItem>
+        <ListItem>Equipe organisé et formé à ces pratiques</ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
         CD: Continuous deployement
       </Heading>
       <BlockQuote>
@@ -133,7 +151,7 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        CDE: Pourquoi ?
+        CD: Pourquoi ?
       </Heading>
       <List>
         <ListItem>Time to market</ListItem>
@@ -143,10 +161,10 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Pré-requis
+       CD: Pré-requis
       </Heading>
       <List>
-        <ListItem>Tests solides</ListItem>
+        <ListItem>Tests bout en bout solides</ListItem>
         <ListItem>Capacité de rollback</ListItem>
         <ListItem>Possibilité de faire du deploy partiel</ListItem>
       </List>
@@ -185,41 +203,8 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Les tests fonctionnels
+        Démo
       </Heading>
-      <List>
-        <ListItem>
-          <strong>Quoi ?</strong> Des fonctionnalités
-        </ListItem>
-        <ListItem>
-          <strong>Quand ?</strong> A chaque livraison
-        </ListItem>
-        <ListItem>
-          <strong>Pourquoi ?</strong> Vérifier que l'application est cohérente
-          avec les spécifications et/ou cahier des charges.
-        </ListItem>
-      </List>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-        Les tests de non-régression
-      </Heading>
-      <List>
-        <ListItem>
-          <strong>Quoi ?</strong> Des fonctionnalités
-        </ListItem>
-        <ListItem>
-          <strong>Comment ?</strong> Outils de test automatisés
-        </ListItem>
-        <ListItem>
-          <strong>Quand ?</strong> Le plus souvent possible
-        </ListItem>
-        <ListItem>
-          <strong>Pourquoi ?</strong> Vérifier que les différentes
-          itérations/modifications n'ont pas altéré des fonctionnalités déjà
-          présentes.
-        </ListItem>
-      </List>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
