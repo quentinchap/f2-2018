@@ -81,7 +81,7 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-       CDE: Pré-requis
+        CI: Pré-requis
       </Heading>
       <List>
         <ListItem>Tests unitaires robustes</ListItem>
@@ -130,11 +130,11 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-       CDE: Pré-requis
+        CDE: Pré-requis
       </Heading>
       <List>
         <ListItem>Tests d'intégration évolué</ListItem>
-        <ListItem>Equipe organisé et formé à ces pratiques</ListItem>
+        <ListItem>Equipe organisée et formée à ces pratiques</ListItem>
       </List>
     </Slide>
     <Slide transition={["fade"]}>
@@ -143,11 +143,17 @@ const CiCdPrez = ({ classes }) => (
       </Heading>
       <BlockQuote>
         <Quote>
-          Approche utilisé par beaucoup de géant du web qui consiste à
-          automatiser toutes la chaîne jusqu'à la livraison en production
-          à chaque dépôt ou pull request sur le repo git.
+          Approche utilisée par beaucoup de géant du web qui consiste à
+          automatiser toutes la chaîne jusqu'à la livraison en production à
+          chaque dépôt ou pull request sur un repo git.
         </Quote>
       </BlockQuote>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        CD: Continuous delivery
+      </Heading>
+      Etapes CDE -> autres tests -> Livraison en production
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
@@ -161,12 +167,12 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-       CD: Pré-requis
+        CD: Pré-requis
       </Heading>
       <List>
         <ListItem>Tests bout en bout solides</ListItem>
-        <ListItem>Capacité de rollback</ListItem>
-        <ListItem>Possibilité de faire du deploy partiel</ListItem>
+        <ListItem>Capacités de rollback</ListItem>
+        <ListItem>Deploy partiel</ListItem>
       </List>
     </Slide>
     <Slide transition={["fade"]}>
@@ -208,32 +214,102 @@ const CiCdPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Les tests IHM
+        ZDD: Zero Downtime Deployment
+      </Heading>
+      <p>
+        Capacités à déployer une nouvelle version applicative sans coupure de
+        service.
+      </p>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        ZDD: Blue/Green Deployment
+      </Heading>
+      <p>
+        Application répliqué avec une distribtution du service via un load
+        balancer.
+      </p>
+      <p>
+        Déploiement progressif sur les différents noeud afin qu'il y ait en
+        permanence une infra up (sur la nouvelle ou l'ancienne version)
+      </p>
+      <p>
+        <strong>But</strong> Eviter la coupure de service sans ajouter trop de
+        complexité.
+      </p>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        ZDD: Canary Release
+      </Heading>
+      <p>
+        Pool d'instances recevant la mise à jour alors qu'une autres partie
+        reste sur l'ancienne version. Certain utilisateurs (toujours les même)
+        sont progressivement redirigé sur les nouvelles instances.
+      </p>
+      <p>
+        <strong>But</strong> Eviter la coupure de service + tester sur une
+        partie de l'audience la nouvelle mise à jour. Si problème arrêt du
+        déploiement et rollback.
+      </p>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        ZDD: Dark Launch
+      </Heading>
+      <p>
+        idem précédent pattern cependant avant de connecter le public sur les
+        nouvelles instances on test la plateforme avec du faux traffic.
+      </p>
+      <p>
+        <strong>But</strong> Idem solution précédentes + tests de performances
+        supplémentaires.
+      </p>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        ZDD: Impact
       </Heading>
       <List>
         <ListItem>
-          <strong>Quoi ?</strong> Les écrans
+          Besoin d'une stratégie de persistance adaptée et distribué.
         </ListItem>
-        <ListItem>
-          <strong>Comment ?</strong> Outils spécifiques (selenium, etc.) ou
-          manuellement
-        </ListItem>
-        <ListItem>
-          <strong>Pourquoi ?</strong> Deux types de tests: <br />
-          Tests utilisateurs (UX)
-          <br />
-          Tests End to end
-        </ListItem>
+        <ListItem>Besoin de technique d'authentification agnostique.</ListItem>
       </List>
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Les autres
+        Fonctionnalités à la carte
       </Heading>
-      <List>
-        <ListItem>Tests de configurations</ListItem>
-        <ListItem>Tests de performances</ListItem>
-      </List>
+      <p>
+        Possibilité d'activé ou non tout ou partie des fonctionnalités de
+        l'application
+      </p>
+      <p>
+        <strong>But</strong> permet de ne pas activer une fonctionnalité non
+        terminée ou buguée tout en concervant les bonnes pratiques du Continuous
+        Deployment
+      </p>
+      <p>
+        <strong>Avantages</strong> Simplifie la stratégie de rollback et permet
+        de sécuriser les déploiements. <br />
+        Permet de tester des fonctionnalités.
+      </p>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Devops
+      </Heading>
+      <p>
+        Type d'organisation visant à reconsidérer la frontière entre les équipes
+        de développement et les ops. Complétement obligatoire puisque chaque dev
+        est responsable directement du prochain code déployé.
+      </p>
+      <p>
+        Besoin pour les ops d'acquérir une culture de développement afin de
+        fournir des outils adaptés et au dev une culture ops afin d'être
+        conscient de ce qui sera déployer en production.
+      </p>
     </Slide>
   </Deck>
 );
