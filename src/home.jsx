@@ -23,7 +23,7 @@ const Home = props => {
       <div className={classes.content}>
         <div className={classes.title}>
           <Typography variant="h4" gutterBottom>
-            Fil rouge test
+            Fil rouge
           </Typography>
         </div>
         <Link to="eval/tp" className={classes.noDecoration}>
