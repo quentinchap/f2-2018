@@ -1,9 +1,9 @@
 {
-  "main.css": "/f2-2018/static/css/main.5d8474f1.chunk.css",
-  "main.js": "/f2-2018/static/js/main.86f74cbe.chunk.js",
-  "main.js.map": "/f2-2018/static/js/main.86f74cbe.chunk.js.map",
-  "static/js/1.aa837e97.chunk.js": "/f2-2018/static/js/1.aa837e97.chunk.js",
-  "static/js/1.aa837e97.chunk.js.map": "/f2-2018/static/js/1.aa837e97.chunk.js.map",
+  "main.css": "/f2-2018/static/css/main.c489c589.chunk.css",
+  "main.js": "/f2-2018/static/js/main.81ba4672.chunk.js",
+  "main.js.map": "/f2-2018/static/js/main.81ba4672.chunk.js.map",
+  "static/js/1.58ba40f5.chunk.js": "/f2-2018/static/js/1.58ba40f5.chunk.js",
+  "static/js/1.58ba40f5.chunk.js.map": "/f2-2018/static/js/1.58ba40f5.chunk.js.map",
   "runtime~main.js": "/f2-2018/static/js/runtime~main.2f5f0c3b.js",
   "runtime~main.js.map": "/f2-2018/static/js/runtime~main.2f5f0c3b.js.map",
   "static/media/hdfs.png": "/f2-2018/static/media/hdfs.c75209ee.png",
@@ -81,6 +81,7 @@
   "static/media/column2.png": "/f2-2018/static/media/column2.620d14a9.png",
   "static/media/cap.png": "/f2-2018/static/media/cap.bb9daf6f.png",
   "static/media/normalization.png": "/f2-2018/static/media/normalization.8f94cc32.png",
+  "static/media/sharding.png": "/f2-2018/static/media/sharding.b9667190.png",
   "static/media/normalization2.png": "/f2-2018/static/media/normalization2.26bb978f.png",
   "static/media/tdd.png": "/f2-2018/static/media/tdd.7c3112a5.png",
   "static/media/coverage.png": "/f2-2018/static/media/coverage.09275cff.png",
@@ -96,8 +97,8 @@
   "static/media/openIdFlow.png": "/f2-2018/static/media/openIdFlow.d437645b.png",
   "static/media/cicdecd.png": "/f2-2018/static/media/cicdecd.6c8b7420.png",
   "static/media/nodeInit1.png": "/f2-2018/static/media/nodeInit1.5393bfc1.png",
-  "static/css/main.5d8474f1.chunk.css.map": "/f2-2018/static/css/main.5d8474f1.chunk.css.map",
+  "static/css/main.c489c589.chunk.css.map": "/f2-2018/static/css/main.c489c589.chunk.css.map",
   "index.html": "/f2-2018/index.html",
-  "precache-manifest.387d4615c8c29e9b884dbd90908b0ff6.js": "/f2-2018/precache-manifest.387d4615c8c29e9b884dbd90908b0ff6.js",
+  "precache-manifest.e3696b5a376acc7caacaa973425e8725.js": "/f2-2018/precache-manifest.e3696b5a376acc7caacaa973425e8725.js",
   "service-worker.js": "/f2-2018/service-worker.js"
 }
