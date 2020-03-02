@@ -2,14 +2,7 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import {
-  Deck,
-  Heading,
-  ListItem,
-  List,
-  Slide,
-  Text
-} from "spectacle";
+import { Deck, Heading, ListItem, List, Slide, Text } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
 import hdfs from "../assets/img/mongo/hdfs.png";
@@ -70,14 +63,30 @@ const MongoPrez2 = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         HDFS
       </Heading>
-      <img src={hdfs} alt="mongo"/>
+      <img src={hdfs} alt="mongo" />
       <p>Spark, HBase, ect.</p>
     </Slide>
     <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
       <Heading size={6} textColor="primary" caps>
-        Clustered index
+        Sharding
       </Heading>
-      <img src={clusteredIndex} alt="mongo"/>
+      <List>
+        <ListItem>
+          <strong>Des routeurs</strong> mongos
+        </ListItem>
+        <ListItem>
+          <strong>Des serveurs de configuration</strong> Config Server
+        </ListItem>
+        <ListItem>
+          <strong>Des serveurs de données</strong> Shard
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Sharding
+      </Heading>
+      <img src={clusteredIndex} alt="mongo" />
       <p>Mongo DB, ect.</p>
     </Slide>
     <Slide transition={["fade"]}>

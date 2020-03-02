@@ -17,12 +17,16 @@ export const coursesTools = [
   {
     active: true,
     title: "Les bases du web",
+    done: true,
+
     description: "Les concepts de bases à maitriser",
     icon: webIcon,
     course: "/base",
     evaluation: ""
   },
   {
+    done: true,
+
     active: true,
     title: "Git",
     contain: true,
@@ -33,6 +37,8 @@ export const coursesTools = [
   },
 
   {
+    done: true,
+
     active: true,
     title: "RESTful",
     description: "Concepts de base",
@@ -41,15 +47,8 @@ export const coursesTools = [
     evaluation: ""
   },
   {
-    active: false,
-    title: "Integration continue",
-    description: "Automatiser et systèmatiser les tâches pénibless",
-    icon: ciIcon,
-    course: "/git",
-    evaluation: "/eval/git"
-  },
-  {
     active: true,
+    done: true,
     title: "UX / UI",
     description:
       "Ce n'est pas l'idée qui compte mais comment vous la présentez.",
@@ -58,6 +57,7 @@ export const coursesTools = [
     // evaluation: "/eval/git"
   },
   {
+    done: true,
     active: true,
     title: "NPM",
     contain: true,
@@ -67,6 +67,7 @@ export const coursesTools = [
   },
   {
     active: true,
+    done: true,
     title: "Techniques d'authentification",
     description: "Contrôler l'accés de vos APIs",
     icon: securityIcon,
@@ -82,6 +83,7 @@ export const coursesTools = [
   },
   {
     active: true,
+    done: true,
     title: "CI / CDE / CD",
     description: "Gardez la maîtrise de vos apps",
     icon: ciCdCover,
@@ -92,6 +94,7 @@ export const coursesTools = [
 export const coursesFront = [
   {
     active: true,
+    done: true,
     title: "Html / CSS",
     description: "Comment décrire une page web static simplement",
     icon: htmlIcon,
@@ -100,6 +103,7 @@ export const coursesFront = [
   },
   {
     active: true,
+    done: true,
     title: "ReactJs",
     description: "",
     icon: webIcon,
@@ -108,6 +112,7 @@ export const coursesFront = [
   },
   {
     active: true,
+    done: true,
     title: "ReactJs - part 2",
     description: "L'asynchrone",
     icon: webIcon,
@@ -116,8 +121,10 @@ export const coursesFront = [
   },
   {
     active: true,
+    done: true,
     title: "Se connecter à une api sécurisée",
-    description: "Comment consommer des Apis sécurisées via votre client react.",
+    description:
+      "Comment consommer des Apis sécurisées via votre client react.",
     icon: securityIcon,
     course: "/auth-front",
     evaluation: ""
@@ -134,6 +141,7 @@ export const coursesFront = [
 export const coursesBack = [
   {
     active: true,
+    done: true,
     title: " Ma première API",
     description: "",
     icon: webIcon,
@@ -142,35 +150,22 @@ export const coursesBack = [
   },
   {
     active: true,
+    done: true,
     title: "BDD NoSql",
     description: "NoSQL, MongoDB & Mongoose",
     icon: mongoBack,
     course: "/mongo",
     evaluation: ""
   },
-  {
-    active: false,
-    title: "BDD NoSql - part 2",
-    description: "Technologies et outils",
-    icon: mongoBack,
-    course: "/mongo2",
-    evaluation: ""
-  },
+
   {
     active: true,
+    done: true,
     title: "Sécurisez vos routes",
     description: "Contrôle d'accés à base de token JWT",
     icon: securityIcon,
     course: "/auth-back",
     evaluation: ""
-  },
-  {
-    active: false,
-    title: "Tests NodeJs",
-    description: "Mettre en place des tests NodeJS",
-    icon: testIcon,
-    course: "/tests-node"
-    // evaluation: "/eval/git"
   },
   {
     active: false,
@@ -241,14 +236,6 @@ export const livres = [
           "http://www.r-5.org/files/books/computers/languages/escss/w-tkt/react/Alex_Banks_and_Eve_Porcello-Learning_React-EN.pdf"
       }
     ],
-    evaluation: ""
-  },
-  {
-    active: false,
-    title: "BDD NoSql - part 2",
-    description: "Technologies et outils",
-    icon: mongoBook,
-    course: "/mongo2",
     evaluation: ""
   },
   {

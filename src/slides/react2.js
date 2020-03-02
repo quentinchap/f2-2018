@@ -2,18 +2,13 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import {
-  Deck,
-  Heading,
-  ListItem,
-  List,
-  Slide,
-  Text
-} from "spectacle";
+import { Deck, Heading, ListItem, List, Slide, Text } from "spectacle";
 import theme from "../theme";
 import { withStyles } from "@material-ui/core";
 import simple_req from "../assets/img/reactAsync/simple_req.png";
 import { LiveProvider, LiveEditor, LivePreview } from "react-live";
+import archiJs from "../assets/img/archiJs.png";
+import react1Fetch from "../assets/img/react1Fetch.png";
 
 let callBackExample = `setTimeout(function(){ alert("Hello"); }, 3000);`;
 let promiseExample = `
@@ -292,6 +287,40 @@ const res = await API.delete('/users/\${this.state.id}');
       >
         <LiveEditor />
       </LiveProvider>
+    </Slide>
+
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Asynchrone
+      </Heading>
+      <List>
+        <ListItem>Monothread</ListItem>
+        <ListItem>Ne pas bloquer l'interface utilisateur</ListItem>
+      </List>
+      <img src={archiJs} alt="react" />
+      <br />
+      <a
+        style={{ fontSize: "0.5em" }}
+        href="https://javascript.developpez.com/actu/102019/Apprendre-les-mecanismes-de-base-de-l-asynchrone-en-JavaScript-un-tutoriel-de-Yahiko/"
+      >
+        Source
+      </a>
+    </Slide>
+
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Fetch
+      </Heading>
+      <img src={react1Fetch} alt="react" />
+    </Slide>
+
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Asynchrone
+      </Heading>
+      <a href=" https://en.wikipedia.org/api/rest_v1/#!/Page_content/get_page">
+        Jouez avec l'API de Wikipédia
+      </a>
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>

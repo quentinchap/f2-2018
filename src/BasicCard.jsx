@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 
 const BasicCard = ({
+  done,
   active,
   classes,
   title,
@@ -33,7 +34,7 @@ const BasicCard = ({
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {title}
+              {title} {done ? "[Done]" : ""}
             </Typography>
             <Typography component="p">{description}</Typography>
           </CardContent>

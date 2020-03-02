@@ -21,8 +21,9 @@ import cap from "../assets/img/mongo/cap.png";
 import normalization from "../assets/img/mongo/normalization.png";
 import hdfs from "../assets/img/mongo/hdfs.png";
 import clusteredIndex from "../assets/img/mongo/clusteredIndex.png";
+import sharding from "../assets/img/mongo/sharding.png";
 import normalization2 from "../assets/img/mongo/normalization2.png";
-import { LiveProvider, LiveEditor} from "react-live";
+import { LiveProvider, LiveEditor } from "react-live";
 
 let conf = `
 import mongoose from "mongoose";
@@ -377,7 +378,7 @@ const MongoPrez = ({ classes }) => (
       <Heading size={6} textColor="tertiary" caps>
         Thèorême de CAP
       </Heading>
-      <img src={cap} alt="mongo"  />
+      <img src={cap} alt="mongo" />
       <p>2000, Eric A. Brewer</p>
     </Slide>
     <Slide transition={["fade"]}>
@@ -623,6 +624,7 @@ const MongoPrez = ({ classes }) => (
       <img src={hdfs} alt="mongo" />
       <p>Spark, HBase, ect.</p>
     </Slide>
+
     <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Clustered index
@@ -631,22 +633,50 @@ const MongoPrez = ({ classes }) => (
       <p>Mongo DB, ect.</p>
       <p>replica set</p>
     </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-        Table de hachage distribuée (DHT)
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Replica set
       </Heading>
-      <p>Avantages</p>
       <List>
         <ListItem>
-          Distribution maximale qui est capable de s'auto-gérer
+          <strong>Primary / secondary</strong>
         </ListItem>
-        <ListItem>Elasticité simplifiée</ListItem>
-      </List>
-      <p>Inconvénients</p>
-      <List>
-        <ListItem>Difficile de se prémunir contre les pannes</ListItem>
+        <ListItem>
+          <strong>Primary</strong> Reçoit toutes les requêtes, s'occupe de la
+          cohérence.
+        </ListItem>
+        <ListItem>
+          <strong>Secondary</strong> Reçoit des replicas.
+        </ListItem>
+        <ListItem>
+          <strong>Arbitre</strong> Surveille l'état du système et lance une
+          élection de primary si besoin.
+        </ListItem>
       </List>
     </Slide>
+    <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+      <Heading size={6} textColor="primary" caps>
+        Sharding
+      </Heading>
+      <List>
+        <ListItem>
+          <strong>Des routeurs</strong> mongos
+        </ListItem>
+        <ListItem>
+          <strong>Des serveurs de configuration</strong> Config Server
+        </ListItem>
+        <ListItem>
+          <strong>Des serveurs de données</strong> Shard
+        </ListItem>
+      </List>
+    </Slide>
+    <Slide transition={["fade"]}>
+      <Heading size={6} textColor="tertiary" caps>
+        Sharding
+      </Heading>
+      <img src={sharding} alt="mongo" />
+    </Slide>
+
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
         Liens utiles

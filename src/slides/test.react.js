@@ -95,91 +95,15 @@ const TestReactPrez = ({ classes }) => (
     </Slide>
     <Slide transition={["fade"]}>
       <Heading size={6} textColor="tertiary" caps>
-        Jest
+        Lib et outils
       </Heading>
-      <LiveProvider
-        code={`
-//installation
-yarn add --dev jest enzyme enzyme-adapter-react-16 enzyme-to-json babel-jest
-//ou
-npm i jest enzyme enzyme-adapter-react-16 enzyme-to-json babel-jest --save-dev
+      <List>
+        <ListItem>Jest</ListItem>
+        <ListItem>Riteway</ListItem>
+        <ListItem>Enzyme</ListItem>
+        <ListItem>...</ListItem>
+      </List>
 
-// Update package.json
-"scripts": {
-  ...
-  "test": "jest"
-},
-        `}
-      >
-        <LiveEditor />
-      </LiveProvider>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-        Premier test
-      </Heading>
-      <LiveProvider
-        code={`
-        function sum(a, b) {
-          return a + b;
-        }
-        
-        it('render correctly text component', () => {  
-          expect(sum(1, 2)).toBe(3);
-        });
-        `}
-      >
-        <LiveEditor />
-      </LiveProvider>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-      Config
-      </Heading>
-      <LiveProvider code={conf}>
-        <LiveEditor />
-      </LiveProvider>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-      Config
-      </Heading>
-      <LiveProvider code={configFile}>
-        <LiveEditor />
-      </LiveProvider>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-      Tester avec des snapshots
-      </Heading>
-      <LiveProvider code={firstSnap}>
-        <LiveEditor />
-      </LiveProvider>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-      Tester avec des snapshots
-      </Heading>
-      <LiveProvider code={firstTest}>
-        <LiveEditor />
-      </LiveProvider>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-        Tester des actions
-      </Heading>
-      <LiveProvider code={testClick}>
-        <LiveEditor />
-      </LiveProvider>
-    </Slide>
-    <Slide transition={["fade"]}>
-      <Heading size={6} textColor="tertiary" caps>
-        Couverture de code
-      </Heading>
-      <LiveProvider code={`npx jest --coverage`}>
-        <LiveEditor />
-      </LiveProvider>
-      <img src={coverage} alt="react"/>
     </Slide>
   </Deck>
 );

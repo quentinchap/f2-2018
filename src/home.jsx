@@ -52,6 +52,7 @@ const Home = props => {
         </div>
         {coursesTools.map(c => (
           <BasicCard
+            done={c.done}
             key={c.title}
             active={c.active}
             classes={classes}
@@ -70,6 +71,7 @@ const Home = props => {
         </div>
         {coursesFront.map(c => (
           <BasicCard
+            done={c.done}
             key={c.title}
             active={c.active}
             classes={classes}
@@ -89,6 +91,7 @@ const Home = props => {
         </div>
         {coursesBack.map(c => (
           <BasicCard
+            done={c.done}
             key={c.title}
             active={c.active}
             classes={classes}

@@ -30,7 +30,7 @@ const AuthPrez = ({ classes }) => (
   <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-        Techniques d'authentification
+       Solution clés en main
       </Heading>
       <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
         Contrôler l'accés de vos APIs
